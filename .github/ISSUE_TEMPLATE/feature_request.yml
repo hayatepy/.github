@@ -1,0 +1,24 @@
+name: Feature request
+description: Propose a focused, evidence-backed capability
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Real use case
+      description: Describe the application or runtime problem this would solve.
+    validations:
+      required: true
+  - type: textarea
+    id: standard
+    attributes:
+      label: Relevant standard or prior art
+      description: Link the WHATWG, IETF, W3C, MCP, or runtime behavior if applicable.
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Explain how you handle this today and why it is insufficient.
+    validations:
+      required: true
