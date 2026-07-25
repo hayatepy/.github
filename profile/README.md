@@ -34,18 +34,26 @@ uv run uvicorn app:app --reload
 ## Ecosystem and compatibility
 
 | Package | Current line | Role | Runtime requirements |
-|---|---:|---|---|
-| [`hayate`](https://github.com/hayatepy/hayate) | 0.8.x | Core framework and runtime adapters | Python 3.12+ |
-| [`hayate-auth`](https://github.com/hayatepy/hayate-auth) | 0.7.x | Authentication and OAuth 2.1 authorization server | `hayate>=0.8`, `hayate-fetch>=0.1` |
-| [`hayate-mcp`](https://github.com/hayatepy/hayate-mcp) | 0.6.x | MCP Streamable HTTP transport and OAuth resource server | `hayate>=0.6`, `mcp>=1.12` |
-| [`hayate-openapi`](https://github.com/hayatepy/hayate-openapi) | 0.1.x | OpenAPI 3.1 generation | `hayate>=0.8` |
+| --- | ---: | --- | --- |
+| [`hayate`](https://github.com/hayatepy/hayate) | 0.10.x | Core framework and runtime adapters | Python 3.12+ |
+| [`hayate-auth`](https://github.com/hayatepy/hayate-auth) | 0.9.x | Authentication and OAuth 2.1 authorization server | `hayate>=0.8`, `hayate-fetch>=0.1.2` |
+| [`hayate-mcp`](https://github.com/hayatepy/hayate-mcp) | 0.8.x | MCP 2025-11-25 transport and OAuth resource server | `hayate>=0.8`; official SDK on CPython, focused runtime on Workers |
+| [`hayate-openapi`](https://github.com/hayatepy/hayate-openapi) | 0.2.x | OpenAPI 3.1 generation | `hayate>=0.8` |
 | [`hayate-fetch`](https://github.com/hayatepy/hayate-fetch) | 0.1.x | Client-side WHATWG fetch for CPython and Workers | `hayate>=0.8` |
 | [`create-hayate`](https://github.com/hayatepy/create-hayate) | 0.1.x | Tested API and Workers project scaffolds | Python 3.12+ |
 
-The primary end-to-end story is a hayate application that hosts an MCP server
-and its OAuth authorization server in one process. The same application has
-been exercised over real HTTP on ASGI, local workerd, and a deployed
-Cloudflare Python Worker with D1.
+## What is verified
+
+- The documented WHATWG URL scope passes
+  [306 of 306 vendored web-platform-tests](https://hayatepy.github.io/hayate/conformance/).
+- `hayate-mcp` negotiates MCP 2025-11-25 on both ASGI and Cloudflare Workers.
+  Its Workers gate boots real workerd and completes `initialize`, `tools/list`,
+  and `tools/call` with the official SDK client.
+- The primary end-to-end path — an MCP server and its OAuth authorization
+  server in one application — has been exercised over real HTTP on ASGI,
+  local workerd, and a deployed Cloudflare Python Worker with D1.
+- Public releases are built by protected tag workflows and include an SPDX
+  SBOM plus GitHub build and SBOM attestations.
 
 ## Project principles
 
@@ -58,7 +66,7 @@ Cloudflare Python Worker with D1.
 - **Portable by construction.** Application code should not change when the
   runtime adapter changes.
 
-The ecosystem is alpha software. Public APIs may still move before 1.0; each
+Every package is still pre-1.0. Public APIs may move before 1.0; each
 repository documents its current support and security posture.
 
 ## Contributing and security
