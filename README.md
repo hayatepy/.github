@@ -9,6 +9,8 @@ This repository is the canonical public navigation and policy hub for the
   and its deployment boundaries.
 - [Compatibility](docs/COMPATIBILITY.md) — generated package, protocol, and
   runtime evidence.
+- [Design-partner program](docs/DESIGN_PARTNERS.md) — a bounded path for real
+  external applications to test the v1 contract.
 - [Guidance for coding agents](llms.txt) — concise machine-readable project
   context.
 - [Contributing](CONTRIBUTING.md), [support](SUPPORT.md), and

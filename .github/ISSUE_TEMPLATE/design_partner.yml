@@ -1,0 +1,89 @@
+name: Design-partner application
+description: Apply to test Hayate with an owner-external application
+title: "[Design partner]: "
+labels: ["help wanted"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This issue is public. Share only high-level, non-confidential information.
+        Do not include credentials, customer data, proprietary code, unreleased
+        product details, or security vulnerabilities. Read the
+        [program description](https://github.com/hayatepy/.github/blob/main/docs/DESIGN_PARTNERS.md)
+        before applying.
+  - type: dropdown
+    id: track
+    attributes:
+      label: Primary track
+      description: Choose the closest primary workload.
+      options:
+        - Conventional HTTP API on CPython/ASGI
+        - MCP or agent backend
+        - Cloudflare Workers deployment
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Application outcome
+      description: Describe the user-facing outcome without confidential details.
+      placeholder: A short description of what the application does and who it serves.
+    validations:
+      required: true
+  - type: input
+    id: current_stack
+    attributes:
+      label: Current or planned stack
+      description: List the relevant runtime, framework, data store, and deployment target.
+      placeholder: Python 3.13, FastAPI, PostgreSQL, and a managed container platform
+    validations:
+      required: true
+  - type: checkboxes
+    id: packages
+    attributes:
+      label: Intended Hayate packages
+      description: Select every package you expect to evaluate.
+      options:
+        - label: hayate
+        - label: hayate-auth
+        - label: hayate-fetch
+        - label: hayate-mcp
+        - label: hayate-openapi
+        - label: hayate-sql
+        - label: create-hayate
+    validations:
+      required: true
+  - type: input
+    id: milestone
+    attributes:
+      label: Target milestone
+      description: Give a date or bounded window for the first test or deployment.
+      placeholder: First passing integration test by 2026-09-01
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Success evidence
+      description: State what a successful evaluation would prove for your application.
+      placeholder: The same authenticated MCP tools run on ASGI and Workers with one application core.
+    validations:
+      required: true
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Public constraints
+      description: List only non-confidential constraints and say whether private follow-up would be required.
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmations
+      options:
+        - label: This application is not owned by the Hayate maintainer.
+          required: true
+        - label: I have not included secrets, customer data, proprietary code, or vulnerability details.
+          required: true
+        - label: I can share the measured onboarding outcome, privately if necessary.
+          required: true
+        - label: I understand that applying does not guarantee selection, funding, or an SLA.
+          required: true
