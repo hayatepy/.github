@@ -39,8 +39,9 @@ uv run uvicorn app:app --reload
 | [`hayate-auth`](https://github.com/hayatepy/hayate-auth) | 0.9.x | Authentication and OAuth 2.1 authorization server | `hayate>=0.8`, `hayate-fetch>=0.1.2` |
 | [`hayate-mcp`](https://github.com/hayatepy/hayate-mcp) | 0.10.x | MCP 2025-11-25 transport, request context, and OAuth resource server | `hayate>=0.8`; official SDK on CPython, schema-validated runtime on Workers |
 | [`hayate-openapi`](https://github.com/hayatepy/hayate-openapi) | 0.3.x | OpenAPI 3.1 generation and hardened interactive docs | `hayate>=0.8` |
+| [`hayate-sql`](https://github.com/hayatepy/hayate-sql) | 0.1.x | Migration-checked SQL contracts and typed query facades | Python 3.12+; PostgreSQL, SQLite, and Cloudflare D1 |
 | [`hayate-fetch`](https://github.com/hayatepy/hayate-fetch) | 0.1.x | Client-side WHATWG fetch for CPython and Workers | `hayate>=0.8` |
-| [`create-hayate`](https://github.com/hayatepy/create-hayate) | 0.2.x | Tested API, Workers, and MCP 2025-11-25 scaffolds | Python 3.12+ |
+| [`create-hayate`](https://github.com/hayatepy/create-hayate) | 0.3.x | Tested API, Workers, and MCP 2025-11-25 scaffolds | Python 3.12+ |
 
 ## What is verified
 
@@ -54,7 +55,9 @@ uv run uvicorn app:app --reload
   and `tools/call` with the official SDK client.
 - [FolioMCP](https://github.com/yhay81/foliomcp-api) uses the published
   `hayate-mcp` Workers runtime with its existing Cloudflare Access identity,
-  D1, R2, Queue, and rate-limit bindings. Its CI repeats the full workerd path.
+  D1, R2, Queue, and rate-limit bindings. It also compiles `hayate-sql`
+  contracts against every D1 migration and exercises the generated facade in
+  its full workerd CI path.
 - `create-hayate` generates an auth-optional MCP project that is tested over
   both real ASGI HTTP and local workerd.
 - The primary end-to-end path — an MCP server and its OAuth authorization
