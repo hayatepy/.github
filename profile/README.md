@@ -35,7 +35,7 @@ uv run uvicorn app:app --reload
 
 | Package | Current line | Role | Runtime requirements |
 | --- | ---: | --- | --- |
-| [`hayate`](https://github.com/hayatepy/hayate) | 0.10.x | Core framework and runtime adapters | Python 3.12+ |
+| [`hayate`](https://github.com/hayatepy/hayate) | 0.11.x | Core framework and runtime adapters | Python 3.12+ |
 | [`hayate-auth`](https://github.com/hayatepy/hayate-auth) | 0.9.x | Authentication and OAuth 2.1 authorization server | `hayate>=0.8`, `hayate-fetch>=0.1.2` |
 | [`hayate-mcp`](https://github.com/hayatepy/hayate-mcp) | 0.10.x | MCP 2025-11-25 transport, request context, and OAuth resource server | `hayate>=0.8`; official SDK on CPython, schema-validated runtime on Workers |
 | [`hayate-openapi`](https://github.com/hayatepy/hayate-openapi) | 0.3.x | OpenAPI 3.1 generation and hardened interactive docs | `hayate>=0.8` |
@@ -46,6 +46,9 @@ uv run uvicorn app:app --reload
 
 - The documented WHATWG URL scope passes
   [306 of 306 vendored web-platform-tests](https://hayatepy.github.io/hayate/conformance/).
+- Every core change is tested as an unpublished wheel against the public auth,
+  fetch, MCP, OpenAPI, and scaffold heads. The full profile boots real MCP,
+  generated Workers, and generated MCP workerd instances on Node.js 24.
 - `hayate-mcp` negotiates MCP 2025-11-25 on both ASGI and Cloudflare Workers.
   Its Workers gate boots real workerd and completes `initialize`, `tools/list`,
   and `tools/call` with the official SDK client.
