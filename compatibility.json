@@ -1,0 +1,162 @@
+{
+  "as_of": "2026-07-26",
+  "golden_runtime": {
+    "lock_sha256": "349b2a1b014833c09a7539801bceeaabb33104161d596c93f861633f89138d9c",
+    "node": "24",
+    "platform_packages": [
+      {
+        "package": "workers-py",
+        "role": "Cloudflare Python APIs",
+        "version": "1.15.0"
+      },
+      {
+        "package": "workers-runtime-sdk",
+        "role": "Workers runtime packaging",
+        "version": "1.6.3"
+      }
+    ],
+    "python": "3.13",
+    "workers": {
+      "compatibility_date": "2026-07-01",
+      "default_entrypoint": "WorkerEntrypoint class",
+      "flags": [
+        "python_workers"
+      ],
+      "global_entrypoint": "HTTP-only compatibility mode"
+    }
+  },
+  "minimum_python": "3.12",
+  "packages": [
+    {
+      "evidence": [
+        "golden_app",
+        "ecosystem_smoke"
+      ],
+      "golden": true,
+      "name": "hayate",
+      "role": "Core framework and ASGI, Workers, and Lambda adapters",
+      "version": "0.11.1"
+    },
+    {
+      "evidence": [
+        "ecosystem_smoke"
+      ],
+      "golden": false,
+      "name": "hayate-auth",
+      "role": "Sessions, API keys, OAuth clients, and authorization server",
+      "version": "0.9.0"
+    },
+    {
+      "evidence": [
+        "ecosystem_smoke"
+      ],
+      "golden": false,
+      "name": "hayate-fetch",
+      "role": "Portable WHATWG-style outbound fetch",
+      "version": "0.1.2"
+    },
+    {
+      "evidence": [
+        "golden_app",
+        "ecosystem_smoke"
+      ],
+      "golden": true,
+      "name": "hayate-mcp",
+      "role": "MCP transport, tools, context, and OAuth resource server",
+      "version": "0.10.0"
+    },
+    {
+      "evidence": [
+        "golden_app",
+        "ecosystem_smoke"
+      ],
+      "golden": true,
+      "name": "hayate-openapi",
+      "role": "OpenAPI 3.1 generation, Scalar, and typed-client contracts",
+      "version": "0.3.0"
+    },
+    {
+      "evidence": [
+        "golden_app"
+      ],
+      "golden": true,
+      "name": "hayate-sql",
+      "role": "Migration-checked SQL contracts and typed query facades",
+      "version": "0.1.0"
+    },
+    {
+      "evidence": [
+        "golden_app"
+      ],
+      "golden": true,
+      "name": "create-hayate",
+      "role": "Composable and production application scaffolds",
+      "version": "0.4.0"
+    }
+  ],
+  "protocols": {
+    "mcp": "2025-11-25",
+    "openapi": "3.1.1"
+  },
+  "runtimes": [
+    {
+      "contract": "Pure application requests with local SQLite",
+      "evidence": [
+        "golden_app"
+      ],
+      "name": "Direct",
+      "status": "Golden path"
+    },
+    {
+      "contract": "Real Uvicorn process with SQLite",
+      "evidence": [
+        "golden_app"
+      ],
+      "name": "ASGI",
+      "status": "Golden path"
+    },
+    {
+      "contract": "Real workerd, D1, RPC-capable WorkerEntrypoint, and class handlers",
+      "evidence": [
+        "golden_app",
+        "ecosystem_smoke"
+      ],
+      "name": "Cloudflare Workers class",
+      "status": "Golden default"
+    },
+    {
+      "contract": "Global fetch export without RPC or scheduled class handlers",
+      "evidence": [
+        "core_ci"
+      ],
+      "name": "Cloudflare Workers global",
+      "status": "HTTP-only compatibility mode"
+    },
+    {
+      "contract": "API Gateway v2 adapter around the same application core",
+      "evidence": [
+        "core_ci"
+      ],
+      "name": "AWS Lambda",
+      "status": "Core adapter; outside the golden production flow"
+    }
+  ],
+  "schema_version": 1,
+  "sources": {
+    "core_ci": {
+      "commit": "adfd08aef3c3a98fe89164bed471878f54e5dc97",
+      "label": "Hayate 0.11.1 main CI",
+      "url": "https://github.com/hayatepy/hayate/actions/runs/30199566121"
+    },
+    "ecosystem_smoke": {
+      "commit": "2585b08fc22392480d1ffbb50cc8664ee89e91bc",
+      "label": "Hayate 0.11.1 downstream compatibility CI",
+      "url": "https://github.com/hayatepy/hayate/actions/runs/30199503426"
+    },
+    "golden_app": {
+      "commit": "4d1a1552fda83dbab48cf3472da8b224c24dac8d",
+      "label": "golden-app main CI",
+      "url": "https://github.com/hayatepy/golden-app/actions/runs/30203863427"
+    }
+  }
+}

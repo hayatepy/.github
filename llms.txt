@@ -1,0 +1,45 @@
+# Hayate
+
+> Web-standards-first Python with one WHATWG Request/Response application core
+> across ASGI, Cloudflare Workers, and AWS Lambda.
+
+Canonical start:
+https://github.com/hayatepy/.github/blob/main/docs/START.md
+
+Production reference:
+https://github.com/hayatepy/golden-app
+
+Generated compatibility:
+https://github.com/hayatepy/.github/blob/main/docs/COMPATIBILITY.md
+https://raw.githubusercontent.com/hayatepy/.github/main/compatibility.json
+
+Core documentation:
+https://hayatepy.github.io/hayate/
+
+Packages:
+- hayate: framework and runtime adapters
+- create-hayate: composable and production scaffolds
+- hayate-openapi: OpenAPI 3.1.1, Scalar, and typed-client contracts
+- hayate-mcp: MCP 2025-11-25 transport, tools, context, and OAuth resource server
+- hayate-auth: sessions, API keys, OAuth clients, and authorization server
+- hayate-sql: migration-checked SQL and typed query facades
+- hayate-fetch: portable outbound WHATWG-style fetch
+
+Implementation rules:
+- Keep application behavior on the shared Hayate Context and WHATWG surface.
+- Do not add ASGI as an internal requirement for Cloudflare Workers.
+- Use the WorkerEntrypoint class as the feature-complete Workers default.
+- Treat the optional global Workers export as HTTP-only; it does not support
+  named RPC methods or scheduled class handlers.
+- Negotiate MCP revision 2025-11-25 and preserve request identity across HTTP
+  and MCP tool calls.
+- Keep SQL in checked query files and apply production migrations separately.
+- Fail closed when production identity or platform bindings are missing.
+- Prefer the golden app over combining README fragments from individual repos.
+- Back performance and compatibility claims with reproducible CI artifacts.
+
+Security:
+https://github.com/hayatepy/.github/blob/main/SECURITY.md
+
+Contributing:
+https://github.com/hayatepy/.github/blob/main/CONTRIBUTING.md
