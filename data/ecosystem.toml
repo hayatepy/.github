@@ -1,13 +1,28 @@
 schema_version = 1
-as_of = "2026-07-26"
+as_of = "2026-07-27"
 mcp_revision = "2025-11-25"
 openapi_revision = "3.1.1"
 minimum_python = "3.12"
 
 [sources.golden_app]
 label = "golden-app main CI"
-url = "https://github.com/hayatepy/golden-app/actions/runs/30205434753"
-commit = "0573398a604cc2b7c1f8784dce6ccbfa91b1cf31"
+url = "https://github.com/hayatepy/golden-app/actions/runs/30215926902"
+commit = "f20cf55f863337629bfb3fded1cb4b7b0f5169ab"
+
+[sources.auth_ci]
+label = "hayate-auth 0.10.0 main CI"
+url = "https://github.com/hayatepy/hayate-auth/actions/runs/30215082906"
+commit = "b885e066355196c9caeedb0819eee03fc4d119ed"
+
+[sources.auth_security]
+label = "hayate-auth 0.10.0 security profiles"
+url = "https://github.com/hayatepy/hayate-auth/actions/runs/30215082913"
+commit = "b885e066355196c9caeedb0819eee03fc4d119ed"
+
+[sources.mcp_ci]
+label = "hayate-mcp 0.11.0 main CI"
+url = "https://github.com/hayatepy/hayate-mcp/actions/runs/30215027370"
+commit = "20fbd3f7381d7695fdfaf0a0d1daf7d48109b106"
 
 [sources.ecosystem_full]
 label = "Hayate 0.11.2 downstream full compatibility CI"
@@ -28,10 +43,10 @@ evidence = ["golden_app", "ecosystem_full"]
 
 [[packages]]
 name = "hayate-auth"
-version = "0.9.1"
+version = "0.10.0"
 role = "Sessions, API keys, OAuth clients, and authorization server"
 golden = false
-evidence = ["ecosystem_full"]
+evidence = ["auth_ci", "auth_security"]
 
 [[packages]]
 name = "hayate-fetch"
@@ -42,10 +57,10 @@ evidence = ["ecosystem_full"]
 
 [[packages]]
 name = "hayate-mcp"
-version = "0.10.1"
+version = "0.11.0"
 role = "MCP transport, tools, context, and OAuth resource server"
 golden = true
-evidence = ["golden_app", "ecosystem_full"]
+evidence = ["golden_app", "mcp_ci"]
 
 [[packages]]
 name = "hayate-openapi"
@@ -63,7 +78,7 @@ evidence = ["golden_app"]
 
 [[packages]]
 name = "create-hayate"
-version = "0.4.1"
+version = "0.4.3"
 role = "Composable and production application scaffolds"
 golden = true
 evidence = ["golden_app"]
