@@ -1,7 +1,7 @@
 {
   "as_of": "2026-07-26",
   "golden_runtime": {
-    "lock_sha256": "349b2a1b014833c09a7539801bceeaabb33104161d596c93f861633f89138d9c",
+    "lock_sha256": "790b87a34366493f60cdda4560845b33dd7cef9184e3bef19700b889eb8c880b",
     "node": "24",
     "platform_packages": [
       {
@@ -30,50 +30,50 @@
     {
       "evidence": [
         "golden_app",
-        "ecosystem_smoke"
+        "ecosystem_full"
       ],
       "golden": true,
       "name": "hayate",
       "role": "Core framework and ASGI, Workers, and Lambda adapters",
-      "version": "0.11.1"
+      "version": "0.11.2"
     },
     {
       "evidence": [
-        "ecosystem_smoke"
+        "ecosystem_full"
       ],
       "golden": false,
       "name": "hayate-auth",
       "role": "Sessions, API keys, OAuth clients, and authorization server",
-      "version": "0.9.0"
+      "version": "0.9.1"
     },
     {
       "evidence": [
-        "ecosystem_smoke"
+        "ecosystem_full"
       ],
       "golden": false,
       "name": "hayate-fetch",
       "role": "Portable WHATWG-style outbound fetch",
-      "version": "0.1.2"
+      "version": "0.1.3"
     },
     {
       "evidence": [
         "golden_app",
-        "ecosystem_smoke"
+        "ecosystem_full"
       ],
       "golden": true,
       "name": "hayate-mcp",
       "role": "MCP transport, tools, context, and OAuth resource server",
-      "version": "0.10.0"
+      "version": "0.10.1"
     },
     {
       "evidence": [
         "golden_app",
-        "ecosystem_smoke"
+        "ecosystem_full"
       ],
       "golden": true,
       "name": "hayate-openapi",
       "role": "OpenAPI 3.1 generation, Scalar, and typed-client contracts",
-      "version": "0.3.0"
+      "version": "0.3.1"
     },
     {
       "evidence": [
@@ -82,7 +82,7 @@
       "golden": true,
       "name": "hayate-sql",
       "role": "Migration-checked SQL contracts and typed query facades",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "evidence": [
@@ -91,7 +91,7 @@
       "golden": true,
       "name": "create-hayate",
       "role": "Composable and production application scaffolds",
-      "version": "0.4.0"
+      "version": "0.4.1"
     }
   ],
   "protocols": {
@@ -119,7 +119,7 @@
       "contract": "Real workerd, D1, RPC-capable WorkerEntrypoint, and class handlers",
       "evidence": [
         "golden_app",
-        "ecosystem_smoke"
+        "ecosystem_full"
       ],
       "name": "Cloudflare Workers class",
       "status": "Golden default"
@@ -144,19 +144,19 @@
   "schema_version": 1,
   "sources": {
     "core_ci": {
-      "commit": "adfd08aef3c3a98fe89164bed471878f54e5dc97",
-      "label": "Hayate 0.11.1 main CI",
-      "url": "https://github.com/hayatepy/hayate/actions/runs/30199566121"
+      "commit": "a80a9955603b128af7e496144e9d0b430453572b",
+      "label": "Hayate 0.11.2 main CI",
+      "url": "https://github.com/hayatepy/hayate/actions/runs/30204740083"
     },
-    "ecosystem_smoke": {
-      "commit": "2585b08fc22392480d1ffbb50cc8664ee89e91bc",
-      "label": "Hayate 0.11.1 downstream compatibility CI",
-      "url": "https://github.com/hayatepy/hayate/actions/runs/30199503426"
+    "ecosystem_full": {
+      "commit": "a80a9955603b128af7e496144e9d0b430453572b",
+      "label": "Hayate 0.11.2 downstream full compatibility CI",
+      "url": "https://github.com/hayatepy/hayate/actions/runs/30205457252"
     },
     "golden_app": {
-      "commit": "4d1a1552fda83dbab48cf3472da8b224c24dac8d",
+      "commit": "0573398a604cc2b7c1f8784dce6ccbfa91b1cf31",
       "label": "golden-app main CI",
-      "url": "https://github.com/hayatepy/golden-app/actions/runs/30203863427"
+      "url": "https://github.com/hayatepy/golden-app/actions/runs/30205434753"
     }
   }
 }
