@@ -1,7 +1,7 @@
 {
-  "as_of": "2026-07-26",
+  "as_of": "2026-07-27",
   "golden_runtime": {
-    "lock_sha256": "790b87a34366493f60cdda4560845b33dd7cef9184e3bef19700b889eb8c880b",
+    "lock_sha256": "9fa53adb31a6ec33b480f2cc41a9b0237f24661ac94bf3545cf8cb5aac840c54",
     "node": "24",
     "platform_packages": [
       {
@@ -39,12 +39,13 @@
     },
     {
       "evidence": [
-        "ecosystem_full"
+        "auth_ci",
+        "auth_security"
       ],
       "golden": false,
       "name": "hayate-auth",
       "role": "Sessions, API keys, OAuth clients, and authorization server",
-      "version": "0.9.1"
+      "version": "0.10.0"
     },
     {
       "evidence": [
@@ -58,12 +59,12 @@
     {
       "evidence": [
         "golden_app",
-        "ecosystem_full"
+        "mcp_ci"
       ],
       "golden": true,
       "name": "hayate-mcp",
       "role": "MCP transport, tools, context, and OAuth resource server",
-      "version": "0.10.1"
+      "version": "0.11.0"
     },
     {
       "evidence": [
@@ -91,7 +92,7 @@
       "golden": true,
       "name": "create-hayate",
       "role": "Composable and production application scaffolds",
-      "version": "0.4.1"
+      "version": "0.4.3"
     }
   ],
   "protocols": {
@@ -143,6 +144,16 @@
   ],
   "schema_version": 1,
   "sources": {
+    "auth_ci": {
+      "commit": "b885e066355196c9caeedb0819eee03fc4d119ed",
+      "label": "hayate-auth 0.10.0 main CI",
+      "url": "https://github.com/hayatepy/hayate-auth/actions/runs/30215082906"
+    },
+    "auth_security": {
+      "commit": "b885e066355196c9caeedb0819eee03fc4d119ed",
+      "label": "hayate-auth 0.10.0 security profiles",
+      "url": "https://github.com/hayatepy/hayate-auth/actions/runs/30215082913"
+    },
     "core_ci": {
       "commit": "a80a9955603b128af7e496144e9d0b430453572b",
       "label": "Hayate 0.11.2 main CI",
@@ -154,9 +165,14 @@
       "url": "https://github.com/hayatepy/hayate/actions/runs/30205457252"
     },
     "golden_app": {
-      "commit": "0573398a604cc2b7c1f8784dce6ccbfa91b1cf31",
+      "commit": "f20cf55f863337629bfb3fded1cb4b7b0f5169ab",
       "label": "golden-app main CI",
-      "url": "https://github.com/hayatepy/golden-app/actions/runs/30205434753"
+      "url": "https://github.com/hayatepy/golden-app/actions/runs/30215926902"
+    },
+    "mcp_ci": {
+      "commit": "20fbd3f7381d7695fdfaf0a0d1daf7d48109b106",
+      "label": "hayate-mcp 0.11.0 main CI",
+      "url": "https://github.com/hayatepy/hayate-mcp/actions/runs/30215027370"
     }
   }
 }
