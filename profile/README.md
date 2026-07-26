@@ -3,85 +3,46 @@
 **Web-standards-first Python for applications that run across ASGI, Cloudflare
 Workers, and AWS Lambda.**
 
-hayate uses WHATWG `Request`, `Response`, `Headers`, `URL`, and `URLPattern` as
-its public surface. The application core is a pure
-`fetch(Request) -> Response` function; runtimes and ecosystem features are
-mounted around that core.
-
-```python
-from hayate import Hayate
-
-app = Hayate()
-
-@app.get("/hello/:name")
-async def hello(c):
-    return c.json({"hello": c.req.param("name")})
-```
+Hayate keeps one WHATWG `Request`/`Response` application core while runtime
+adapters and optional features are mounted around it. Use the same application
+logic on a conventional Python server or directly inside Cloudflare workerd.
 
 ## Start here
 
-```sh
-uvx create-hayate my-app
-cd my-app
-uv run pytest
-uv run uvicorn app:app --reload
-```
+1. Follow the [single quickstart](https://github.com/hayatepy/.github/blob/main/docs/START.md).
+2. Use the [executable production golden app](https://github.com/hayatepy/golden-app)
+   for Cloudflare Access, OpenAPI, MCP, checked SQL, SQLite/D1, and deployment.
+3. Check the [generated compatibility evidence](https://github.com/hayatepy/.github/blob/main/docs/COMPATIBILITY.md)
+   before selecting versions or runtimes.
 
-- [Documentation](https://hayatepy.github.io/hayate/)
-- [Core repository](https://github.com/hayatepy/hayate)
-- [PyPI](https://pypi.org/project/hayate/)
+## Choose by outcome
 
-## Ecosystem and compatibility
+| I want to… | Start with |
+|---|---|
+| Build a web API on ASGI, Workers, or Lambda | [`hayate`](https://github.com/hayatepy/hayate) |
+| Generate OpenAPI 3.1 and typed clients | [`hayate-openapi`](https://github.com/hayatepy/hayate-openapi) |
+| Expose MCP 2025-11-25 tools | [`hayate-mcp`](https://github.com/hayatepy/hayate-mcp) |
+| Add sessions, API keys, OAuth, or an authorization server | [`hayate-auth`](https://github.com/hayatepy/hayate-auth) |
+| Use checked SQL with PostgreSQL, SQLite, or D1 | [`hayate-sql`](https://github.com/hayatepy/hayate-sql) |
+| Make portable outbound requests | [`hayate-fetch`](https://github.com/hayatepy/hayate-fetch) |
+| Generate an integrated application | [`create-hayate`](https://github.com/hayatepy/create-hayate) |
 
-| Package | Current line | Role | Runtime requirements |
-| --- | ---: | --- | --- |
-| [`hayate`](https://github.com/hayatepy/hayate) | 0.11.x | Core framework and runtime adapters | Python 3.12+ |
-| [`hayate-auth`](https://github.com/hayatepy/hayate-auth) | 0.9.x | Authentication and OAuth 2.1 authorization server | `hayate>=0.8`, `hayate-fetch>=0.1.2` |
-| [`hayate-mcp`](https://github.com/hayatepy/hayate-mcp) | 0.10.x | MCP 2025-11-25 transport, request context, and OAuth resource server | `hayate>=0.8`; official SDK on CPython, schema-validated runtime on Workers |
-| [`hayate-openapi`](https://github.com/hayatepy/hayate-openapi) | 0.3.x | OpenAPI 3.1 generation and hardened interactive docs | `hayate>=0.8` |
-| [`hayate-sql`](https://github.com/hayatepy/hayate-sql) | 0.1.x | Migration-checked SQL contracts and typed query facades | Python 3.12+; PostgreSQL, SQLite, and Cloudflare D1 |
-| [`hayate-fetch`](https://github.com/hayatepy/hayate-fetch) | 0.1.x | Client-side WHATWG fetch for CPython and Workers | `hayate>=0.8` |
-| [`create-hayate`](https://github.com/hayatepy/create-hayate) | 0.3.x | Tested API, Workers, and MCP 2025-11-25 scaffolds | Python 3.12+ |
+## Evidence, not platform claims
 
-## What is verified
+- The golden app runs direct tests, a real Uvicorn/SQLite flow, and a real
+  workerd/D1 flow. HTTP, identity, OpenAPI, and MCP share one application core.
+- The core compatibility gate installs an unpublished Hayate wheel into auth,
+  fetch, MCP, OpenAPI, and generated application repositories before release.
+- The feature-complete Workers default is a `WorkerEntrypoint` class. The
+  optional global handler is an explicitly HTTP-only compatibility mode.
+- Public releases include locked inputs, SPDX SBOMs, and GitHub attestations.
 
-- The documented WHATWG URL scope passes
-  [306 of 306 vendored web-platform-tests](https://hayatepy.github.io/hayate/conformance/).
-- Every core change is tested as an unpublished wheel against the public auth,
-  fetch, MCP, OpenAPI, and scaffold heads. The full profile boots real MCP,
-  generated Workers, and generated MCP workerd instances on Node.js 24.
-- `hayate-mcp` negotiates MCP 2025-11-25 on both ASGI and Cloudflare Workers.
-  Its Workers gate boots real workerd and completes `initialize`, `tools/list`,
-  and `tools/call` with the official SDK client.
-- [FolioMCP](https://github.com/yhay81/foliomcp-api) uses the published
-  `hayate-mcp` Workers runtime with its existing Cloudflare Access identity,
-  D1, R2, Queue, and rate-limit bindings. It also compiles `hayate-sql`
-  contracts against every D1 migration and exercises the generated facade in
-  its full workerd CI path.
-- `create-hayate` generates an auth-optional MCP project that is tested over
-  both real ASGI HTTP and local workerd.
-- The primary end-to-end path — an MCP server and its OAuth authorization
-  server in one application — has been exercised over real HTTP on ASGI,
-  local workerd, and a deployed Cloudflare Python Worker with D1.
-- Public releases are built by protected tag workflows and include an SPDX
-  SBOM plus GitHub build and SBOM attestations.
-
-## Project principles
-
-- **Standards first.** Public behavior names the WHATWG, IETF, W3C, or MCP
-  specification it follows.
-- **Evidence driven.** Runtime support and performance claims are backed by
-  repeatable tests or recorded measurements.
-- **Small cores.** Optional resources are injected through protocols instead
-  of hidden global integrations.
-- **Portable by construction.** Application code should not change when the
-  runtime adapter changes.
-
-Every package is still pre-1.0. Public APIs may move before 1.0; each
-repository documents its current support and security posture.
+All packages are pre-1.0. Use the compatibility page for the exact evidence
+snapshot rather than assuming every pre-1.0 line can be mixed freely.
 
 ## Contributing and security
 
-See the organization-wide [contributing guide](../CONTRIBUTING.md). Report
-security vulnerabilities privately through the affected repository's
-**Security → Report a vulnerability** flow; do not open a public issue.
+See the organization-wide
+[contributing guide](https://github.com/hayatepy/.github/blob/main/CONTRIBUTING.md).
+Report vulnerabilities privately through the affected repository's
+**Security → Report a vulnerability** flow.

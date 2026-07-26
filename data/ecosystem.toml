@@ -1,0 +1,99 @@
+schema_version = 1
+as_of = "2026-07-26"
+mcp_revision = "2025-11-25"
+openapi_revision = "3.1.1"
+minimum_python = "3.12"
+
+[sources.golden_app]
+label = "golden-app main CI"
+url = "https://github.com/hayatepy/golden-app/actions/runs/30203863427"
+commit = "4d1a1552fda83dbab48cf3472da8b224c24dac8d"
+
+[sources.ecosystem_smoke]
+label = "Hayate 0.11.1 downstream compatibility CI"
+url = "https://github.com/hayatepy/hayate/actions/runs/30199503426"
+commit = "2585b08fc22392480d1ffbb50cc8664ee89e91bc"
+
+[sources.core_ci]
+label = "Hayate 0.11.1 main CI"
+url = "https://github.com/hayatepy/hayate/actions/runs/30199566121"
+commit = "adfd08aef3c3a98fe89164bed471878f54e5dc97"
+
+[[packages]]
+name = "hayate"
+version = "0.11.1"
+role = "Core framework and ASGI, Workers, and Lambda adapters"
+golden = true
+evidence = ["golden_app", "ecosystem_smoke"]
+
+[[packages]]
+name = "hayate-auth"
+version = "0.9.0"
+role = "Sessions, API keys, OAuth clients, and authorization server"
+golden = false
+evidence = ["ecosystem_smoke"]
+
+[[packages]]
+name = "hayate-fetch"
+version = "0.1.2"
+role = "Portable WHATWG-style outbound fetch"
+golden = false
+evidence = ["ecosystem_smoke"]
+
+[[packages]]
+name = "hayate-mcp"
+version = "0.10.0"
+role = "MCP transport, tools, context, and OAuth resource server"
+golden = true
+evidence = ["golden_app", "ecosystem_smoke"]
+
+[[packages]]
+name = "hayate-openapi"
+version = "0.3.0"
+role = "OpenAPI 3.1 generation, Scalar, and typed-client contracts"
+golden = true
+evidence = ["golden_app", "ecosystem_smoke"]
+
+[[packages]]
+name = "hayate-sql"
+version = "0.1.0"
+role = "Migration-checked SQL contracts and typed query facades"
+golden = true
+evidence = ["golden_app"]
+
+[[packages]]
+name = "create-hayate"
+version = "0.4.0"
+role = "Composable and production application scaffolds"
+golden = true
+evidence = ["golden_app"]
+
+[[runtimes]]
+name = "Direct"
+contract = "Pure application requests with local SQLite"
+status = "Golden path"
+evidence = ["golden_app"]
+
+[[runtimes]]
+name = "ASGI"
+contract = "Real Uvicorn process with SQLite"
+status = "Golden path"
+evidence = ["golden_app"]
+
+[[runtimes]]
+name = "Cloudflare Workers class"
+contract = "Real workerd, D1, RPC-capable WorkerEntrypoint, and class handlers"
+status = "Golden default"
+evidence = ["golden_app", "ecosystem_smoke"]
+
+[[runtimes]]
+name = "Cloudflare Workers global"
+contract = "Global fetch export without RPC or scheduled class handlers"
+status = "HTTP-only compatibility mode"
+evidence = ["core_ci"]
+
+[[runtimes]]
+name = "AWS Lambda"
+contract = "API Gateway v2 adapter around the same application core"
+status = "Core adapter; outside the golden production flow"
+evidence = ["core_ci"]
