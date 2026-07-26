@@ -15,6 +15,10 @@ logic on a conventional Python server or directly inside Cloudflare workerd.
 3. Check the [generated compatibility evidence](https://github.com/hayatepy/.github/blob/main/docs/COMPATIBILITY.md)
    before selecting versions or runtimes.
 
+Building a real API, MCP backend, or Workers application? Help shape the v1
+contract through the bounded
+[design-partner program](https://github.com/hayatepy/.github/blob/main/docs/DESIGN_PARTNERS.md).
+
 ## Choose by outcome
 
 | I want to… | Start with |

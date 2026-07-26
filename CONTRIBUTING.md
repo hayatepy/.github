@@ -27,6 +27,13 @@ uv run pytest -q
 Some repositories add acceptance tests or runtime-specific jobs. Run the
 commands documented in that repository before submitting.
 
+## Design partners
+
+If you are evaluating Hayate in an owner-external application and want bounded
+onboarding help, read the
+[design-partner program](docs/DESIGN_PARTNERS.md). Use its public intake form
+instead of filing a speculative framework feature request.
+
 ## Pull requests
 
 - Keep a pull request focused on one problem.

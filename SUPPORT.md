@@ -12,3 +12,7 @@ Before opening an issue:
 
 Security vulnerabilities must be reported privately as described in
 [SECURITY.md](SECURITY.md).
+
+Teams evaluating a real API, MCP backend, or Workers deployment can apply to
+the bounded [design-partner program](docs/DESIGN_PARTNERS.md). The program is
+not a production SLA or a replacement for the issue tracker.
