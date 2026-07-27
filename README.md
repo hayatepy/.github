@@ -9,6 +9,9 @@ This repository is the canonical public navigation and policy hub for the
   and its deployment boundaries.
 - [Compatibility](docs/COMPATIBILITY.md) — generated package, protocol, and
   runtime evidence.
+- [Competitive evidence](https://github.com/hayatepy/hayate/blob/main/docs/benchmarks.md)
+  — reproducible benchmarks plus an unweighted
+  [capability matrix](https://github.com/hayatepy/hayate/blob/main/docs/capabilities.md).
 - [Design-partner program](docs/DESIGN_PARTNERS.md) — a bounded path for real
   external applications to test the v1 contract.
 - [Guidance for coding agents](llms.txt) — concise machine-readable project
