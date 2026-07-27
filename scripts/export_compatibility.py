@@ -53,7 +53,10 @@ def _load() -> dict[str, Any]:
             "lock_sha256": golden["lock_sha256"],
             "workers": golden["workers"],
             "platform_packages": [
-                row
+                {
+                    "package": row["package"],
+                    "version": row["version"],
+                }
                 for row in golden["packages"]
                 if row["package"] in {"workers-py", "workers-runtime-sdk"}
             ],
