@@ -6,8 +6,8 @@ minimum_python = "3.12"
 
 [sources.golden_app]
 label = "golden-app main CI"
-url = "https://github.com/hayatepy/golden-app/actions/runs/30255493569"
-commit = "7d8d28f541540f82d5fb9c1665e8740152b4a357"
+url = "https://github.com/hayatepy/golden-app/actions/runs/30264381972"
+commit = "1351e0d03d3308b21496b01e082b556b8440f970"
 
 [sources.auth_ci]
 label = "hayate-auth 0.10.0 main CI"
@@ -25,44 +25,44 @@ url = "https://github.com/hayatepy/hayate-mcp/actions/runs/30246879078"
 commit = "c1f42c55d47a68fc935460e4a8c07e262a1a7e56"
 
 [sources.openapi_ci]
-label = "hayate-openapi 0.6.0 main CI"
-url = "https://github.com/hayatepy/hayate-openapi/actions/runs/30253456582"
-commit = "c00b24155bd6299ce75a7a9cdac19ee67d4dd169"
+label = "hayate-openapi 0.7.0 main CI"
+url = "https://github.com/hayatepy/hayate-openapi/actions/runs/30261368101"
+commit = "5d274a7cc337c3336d5316421691779504e592f7"
 
 [sources.foliomcp_ci]
 label = "FolioMCP production Workerd CI"
-url = "https://github.com/yhay81/foliomcp-api/actions/runs/30254072441"
-commit = "3082907f2ee3793ff75f65d85d66c80e45446e68"
+url = "https://github.com/yhay81/foliomcp-api/actions/runs/30261761976"
+commit = "a4d110efc223b5774278b21512e176f64f93d525"
 
 [sources.ecosystem_full]
-label = "Hayate 0.12.1 downstream full compatibility CI"
-url = "https://github.com/hayatepy/hayate/actions/runs/30238414785"
-commit = "07ab68863cabeed0bcc86d004dab308f155796dc"
+label = "Hayate 0.13.0 downstream full compatibility CI"
+url = "https://github.com/hayatepy/hayate/actions/runs/30262831912"
+commit = "6d0d75b2dc91ef39b05fa3a81e95320414928c2e"
 
 [sources.core_ci]
-label = "Hayate 0.12.1 main CI"
-url = "https://github.com/hayatepy/hayate/actions/runs/30235859656"
-commit = "07ab68863cabeed0bcc86d004dab308f155796dc"
+label = "Hayate 0.13.0 main CI"
+url = "https://github.com/hayatepy/hayate/actions/runs/30261717080"
+commit = "6d0d75b2dc91ef39b05fa3a81e95320414928c2e"
 
 [sources.scaffold_ci]
-label = "create-hayate 0.7.1 main CI (42/42 backend compositions)"
-url = "https://github.com/hayatepy/create-hayate/actions/runs/30255157739"
-commit = "ba7f2a98b240a08178203b5593a4c770221b9a52"
+label = "create-hayate 0.7.2 main CI (42/42 backend compositions)"
+url = "https://github.com/hayatepy/create-hayate/actions/runs/30263751557"
+commit = "e6c2919090a62a5cc705f038e5bcdef37b496061"
 
 [sources.scaffold_matrix]
-label = "create-hayate 0.7.1 full matrix (112/112)"
-url = "https://github.com/hayatepy/create-hayate/actions/runs/30255530898"
-commit = "ba7f2a98b240a08178203b5593a4c770221b9a52"
-artifact_sha256 = "7faf0a46b41567b5eb9b5578e4cd50e755b03e10afc91f0f405b2fb0f01c5fc7"
+label = "create-hayate 0.7.2 full matrix (112/112)"
+url = "https://github.com/hayatepy/create-hayate/actions/runs/30264415582"
+commit = "e6c2919090a62a5cc705f038e5bcdef37b496061"
+artifact_sha256 = "16241f8ba1dd4f3f55ef5758b7020060c249d4f6666ac142545c04c501fa0b20"
 
 [sources.scaffold_release]
-label = "create-hayate 0.7.1 release provenance"
-url = "https://github.com/hayatepy/create-hayate/actions/runs/30255225219"
-commit = "ba7f2a98b240a08178203b5593a4c770221b9a52"
+label = "create-hayate 0.7.2 release provenance"
+url = "https://github.com/hayatepy/create-hayate/actions/runs/30263833847"
+commit = "e6c2919090a62a5cc705f038e5bcdef37b496061"
 
 [[packages]]
 name = "hayate"
-version = "0.12.1"
+version = "0.13.0"
 role = "Core framework and ASGI, Workers, and Lambda adapters"
 golden = true
 evidence = ["golden_app", "ecosystem_full"]
@@ -90,7 +90,7 @@ evidence = ["golden_app", "mcp_ci", "foliomcp_ci"]
 
 [[packages]]
 name = "hayate-openapi"
-version = "0.6.0"
+version = "0.7.0"
 role = "OpenAPI 3.1 generation, Scalar, and typed-client contracts"
 golden = true
 evidence = ["golden_app", "openapi_ci", "foliomcp_ci"]
@@ -104,7 +104,7 @@ evidence = ["golden_app", "foliomcp_ci"]
 
 [[packages]]
 name = "create-hayate"
-version = "0.7.1"
+version = "0.7.2"
 role = "Composable and production application scaffolds"
 golden = true
 evidence = ["golden_app", "scaffold_ci", "scaffold_matrix", "scaffold_release"]
