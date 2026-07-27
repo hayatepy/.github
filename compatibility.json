@@ -1,7 +1,7 @@
 {
   "as_of": "2026-07-27",
   "golden_runtime": {
-    "lock_sha256": "532b2c50ba1aec63273226890619640b8ccaf8ea4b3d61ddf35326cbe8d3d137",
+    "lock_sha256": "966a3bce976c5996434ea1094c7f278c34c7d8a75ea3c6830c66ea994e0b41b3",
     "node": "24",
     "platform_packages": [
       {
@@ -41,7 +41,7 @@
       "golden": true,
       "name": "hayate",
       "role": "Core framework and ASGI, Workers, and Lambda adapters",
-      "version": "0.12.1"
+      "version": "0.13.0"
     },
     {
       "evidence": [
@@ -82,7 +82,7 @@
       "golden": true,
       "name": "hayate-openapi",
       "role": "OpenAPI 3.1 generation, Scalar, and typed-client contracts",
-      "version": "0.6.0"
+      "version": "0.7.0"
     },
     {
       "evidence": [
@@ -104,7 +104,7 @@
       "golden": true,
       "name": "create-hayate",
       "role": "Composable and production application scaffolds",
-      "version": "0.7.1"
+      "version": "0.7.2"
     }
   ],
   "protocols": {
@@ -168,24 +168,24 @@
       "url": "https://github.com/hayatepy/hayate-auth/actions/runs/30215082913"
     },
     "core_ci": {
-      "commit": "07ab68863cabeed0bcc86d004dab308f155796dc",
-      "label": "Hayate 0.12.1 main CI",
-      "url": "https://github.com/hayatepy/hayate/actions/runs/30235859656"
+      "commit": "6d0d75b2dc91ef39b05fa3a81e95320414928c2e",
+      "label": "Hayate 0.13.0 main CI",
+      "url": "https://github.com/hayatepy/hayate/actions/runs/30261717080"
     },
     "ecosystem_full": {
-      "commit": "07ab68863cabeed0bcc86d004dab308f155796dc",
-      "label": "Hayate 0.12.1 downstream full compatibility CI",
-      "url": "https://github.com/hayatepy/hayate/actions/runs/30238414785"
+      "commit": "6d0d75b2dc91ef39b05fa3a81e95320414928c2e",
+      "label": "Hayate 0.13.0 downstream full compatibility CI",
+      "url": "https://github.com/hayatepy/hayate/actions/runs/30262831912"
     },
     "foliomcp_ci": {
-      "commit": "3082907f2ee3793ff75f65d85d66c80e45446e68",
+      "commit": "a4d110efc223b5774278b21512e176f64f93d525",
       "label": "FolioMCP production Workerd CI",
-      "url": "https://github.com/yhay81/foliomcp-api/actions/runs/30254072441"
+      "url": "https://github.com/yhay81/foliomcp-api/actions/runs/30261761976"
     },
     "golden_app": {
-      "commit": "7d8d28f541540f82d5fb9c1665e8740152b4a357",
+      "commit": "1351e0d03d3308b21496b01e082b556b8440f970",
       "label": "golden-app main CI",
-      "url": "https://github.com/hayatepy/golden-app/actions/runs/30255493569"
+      "url": "https://github.com/hayatepy/golden-app/actions/runs/30264381972"
     },
     "mcp_ci": {
       "commit": "c1f42c55d47a68fc935460e4a8c07e262a1a7e56",
@@ -193,25 +193,25 @@
       "url": "https://github.com/hayatepy/hayate-mcp/actions/runs/30246879078"
     },
     "openapi_ci": {
-      "commit": "c00b24155bd6299ce75a7a9cdac19ee67d4dd169",
-      "label": "hayate-openapi 0.6.0 main CI",
-      "url": "https://github.com/hayatepy/hayate-openapi/actions/runs/30253456582"
+      "commit": "5d274a7cc337c3336d5316421691779504e592f7",
+      "label": "hayate-openapi 0.7.0 main CI",
+      "url": "https://github.com/hayatepy/hayate-openapi/actions/runs/30261368101"
     },
     "scaffold_ci": {
-      "commit": "ba7f2a98b240a08178203b5593a4c770221b9a52",
-      "label": "create-hayate 0.7.1 main CI (42/42 backend compositions)",
-      "url": "https://github.com/hayatepy/create-hayate/actions/runs/30255157739"
+      "commit": "e6c2919090a62a5cc705f038e5bcdef37b496061",
+      "label": "create-hayate 0.7.2 main CI (42/42 backend compositions)",
+      "url": "https://github.com/hayatepy/create-hayate/actions/runs/30263751557"
     },
     "scaffold_matrix": {
-      "artifact_sha256": "7faf0a46b41567b5eb9b5578e4cd50e755b03e10afc91f0f405b2fb0f01c5fc7",
-      "commit": "ba7f2a98b240a08178203b5593a4c770221b9a52",
-      "label": "create-hayate 0.7.1 full matrix (112/112)",
-      "url": "https://github.com/hayatepy/create-hayate/actions/runs/30255530898"
+      "artifact_sha256": "16241f8ba1dd4f3f55ef5758b7020060c249d4f6666ac142545c04c501fa0b20",
+      "commit": "e6c2919090a62a5cc705f038e5bcdef37b496061",
+      "label": "create-hayate 0.7.2 full matrix (112/112)",
+      "url": "https://github.com/hayatepy/create-hayate/actions/runs/30264415582"
     },
     "scaffold_release": {
-      "commit": "ba7f2a98b240a08178203b5593a4c770221b9a52",
-      "label": "create-hayate 0.7.1 release provenance",
-      "url": "https://github.com/hayatepy/create-hayate/actions/runs/30255225219"
+      "commit": "e6c2919090a62a5cc705f038e5bcdef37b496061",
+      "label": "create-hayate 0.7.2 release provenance",
+      "url": "https://github.com/hayatepy/create-hayate/actions/runs/30263833847"
     }
   }
 }
