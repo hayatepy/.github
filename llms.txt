@@ -13,6 +13,10 @@ Generated compatibility:
 https://github.com/hayatepy/.github/blob/main/docs/COMPATIBILITY.md
 https://raw.githubusercontent.com/hayatepy/.github/main/compatibility.json
 
+Competitive evidence:
+https://github.com/hayatepy/hayate/blob/main/docs/benchmarks.md
+https://github.com/hayatepy/hayate/blob/main/docs/capabilities.md
+
 Core documentation:
 https://hayatepy.github.io/hayate/
 
