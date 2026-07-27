@@ -8,9 +8,11 @@ middleware.
 Install [uv](https://docs.astral.sh/uv/), then run:
 
 ```sh
-uvx --refresh --from create-hayate==0.4.3 create-hayate my-app --template workers --preset production
+uvx --refresh --from create-hayate==0.7.0 create-hayate my-app --template workers --preset production
 cd my-app
 uv sync
+test -f uv.lock
+uv sync --locked
 uv run pytest
 uv run ruff check .
 uv run python scripts/check_sql_contracts.py

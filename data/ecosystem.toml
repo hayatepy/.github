@@ -6,8 +6,8 @@ minimum_python = "3.12"
 
 [sources.golden_app]
 label = "golden-app main CI"
-url = "https://github.com/hayatepy/golden-app/actions/runs/30215926902"
-commit = "f20cf55f863337629bfb3fded1cb4b7b0f5169ab"
+url = "https://github.com/hayatepy/golden-app/actions/runs/30238320780"
+commit = "b39b262908cc6d700800c9bb4f0f2fc8ab8827ed"
 
 [sources.auth_ci]
 label = "hayate-auth 0.10.0 main CI"
@@ -25,18 +25,29 @@ url = "https://github.com/hayatepy/hayate-mcp/actions/runs/30215027370"
 commit = "20fbd3f7381d7695fdfaf0a0d1daf7d48109b106"
 
 [sources.ecosystem_full]
-label = "Hayate 0.11.2 downstream full compatibility CI"
-url = "https://github.com/hayatepy/hayate/actions/runs/30205457252"
-commit = "a80a9955603b128af7e496144e9d0b430453572b"
+label = "Hayate 0.12.1 downstream full compatibility CI"
+url = "https://github.com/hayatepy/hayate/actions/runs/30238414785"
+commit = "07ab68863cabeed0bcc86d004dab308f155796dc"
 
 [sources.core_ci]
-label = "Hayate 0.11.2 main CI"
-url = "https://github.com/hayatepy/hayate/actions/runs/30204740083"
-commit = "a80a9955603b128af7e496144e9d0b430453572b"
+label = "Hayate 0.12.1 main CI"
+url = "https://github.com/hayatepy/hayate/actions/runs/30235859656"
+commit = "07ab68863cabeed0bcc86d004dab308f155796dc"
+
+[sources.scaffold_matrix]
+label = "create-hayate 0.7.0 full matrix (112/112)"
+url = "https://github.com/hayatepy/create-hayate/actions/runs/30238513844"
+commit = "a0e828937191d9e0e1e948ad987bd80e48a4d8c4"
+artifact_sha256 = "480662b03c6bd92059d59d32ca1cb016f13a53ef298c877247739fe54df86764"
+
+[sources.scaffold_release]
+label = "create-hayate 0.7.0 release provenance"
+url = "https://github.com/hayatepy/create-hayate/actions/runs/30237634563"
+commit = "a0e828937191d9e0e1e948ad987bd80e48a4d8c4"
 
 [[packages]]
 name = "hayate"
-version = "0.11.2"
+version = "0.12.1"
 role = "Core framework and ASGI, Workers, and Lambda adapters"
 golden = true
 evidence = ["golden_app", "ecosystem_full"]
@@ -64,7 +75,7 @@ evidence = ["golden_app", "mcp_ci"]
 
 [[packages]]
 name = "hayate-openapi"
-version = "0.3.1"
+version = "0.5.0"
 role = "OpenAPI 3.1 generation, Scalar, and typed-client contracts"
 golden = true
 evidence = ["golden_app", "ecosystem_full"]
@@ -78,10 +89,10 @@ evidence = ["golden_app"]
 
 [[packages]]
 name = "create-hayate"
-version = "0.4.3"
+version = "0.7.0"
 role = "Composable and production application scaffolds"
 golden = true
-evidence = ["golden_app"]
+evidence = ["golden_app", "scaffold_matrix", "scaffold_release"]
 
 [[runtimes]]
 name = "Direct"
@@ -105,7 +116,7 @@ evidence = ["golden_app", "ecosystem_full"]
 name = "Cloudflare Workers global"
 contract = "Global fetch export without RPC or scheduled class handlers"
 status = "HTTP-only compatibility mode"
-evidence = ["core_ci"]
+evidence = ["golden_app"]
 
 [[runtimes]]
 name = "AWS Lambda"
