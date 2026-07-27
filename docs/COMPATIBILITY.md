@@ -8,23 +8,23 @@ passing CI evidence. Do not edit it manually. The evidence snapshot is dated
 
 | Package | Version | Role | Production golden app | Evidence |
 |---|---:|---|---|---|
-| [`hayate`](https://github.com/hayatepy/hayate) | `0.11.2` | Core framework and ASGI, Workers, and Lambda adapters | yes | [golden-app main CI](https://github.com/hayatepy/golden-app/actions/runs/30215926902), [Hayate 0.11.2 downstream full compatibility CI](https://github.com/hayatepy/hayate/actions/runs/30205457252) |
+| [`hayate`](https://github.com/hayatepy/hayate) | `0.12.1` | Core framework and ASGI, Workers, and Lambda adapters | yes | [golden-app main CI](https://github.com/hayatepy/golden-app/actions/runs/30238320780), [Hayate 0.12.1 downstream full compatibility CI](https://github.com/hayatepy/hayate/actions/runs/30238414785) |
 | [`hayate-auth`](https://github.com/hayatepy/hayate-auth) | `0.10.0` | Sessions, API keys, OAuth clients, and authorization server | downstream gate | [hayate-auth 0.10.0 main CI](https://github.com/hayatepy/hayate-auth/actions/runs/30215082906), [hayate-auth 0.10.0 security profiles](https://github.com/hayatepy/hayate-auth/actions/runs/30215082913) |
-| [`hayate-fetch`](https://github.com/hayatepy/hayate-fetch) | `0.1.3` | Portable WHATWG-style outbound fetch | downstream gate | [Hayate 0.11.2 downstream full compatibility CI](https://github.com/hayatepy/hayate/actions/runs/30205457252) |
-| [`hayate-mcp`](https://github.com/hayatepy/hayate-mcp) | `0.11.0` | MCP transport, tools, context, and OAuth resource server | yes | [golden-app main CI](https://github.com/hayatepy/golden-app/actions/runs/30215926902), [hayate-mcp 0.11.0 main CI](https://github.com/hayatepy/hayate-mcp/actions/runs/30215027370) |
-| [`hayate-openapi`](https://github.com/hayatepy/hayate-openapi) | `0.3.1` | OpenAPI 3.1 generation, Scalar, and typed-client contracts | yes | [golden-app main CI](https://github.com/hayatepy/golden-app/actions/runs/30215926902), [Hayate 0.11.2 downstream full compatibility CI](https://github.com/hayatepy/hayate/actions/runs/30205457252) |
-| [`hayate-sql`](https://github.com/hayatepy/hayate-sql) | `0.1.1` | Migration-checked SQL contracts and typed query facades | yes | [golden-app main CI](https://github.com/hayatepy/golden-app/actions/runs/30215926902) |
-| [`create-hayate`](https://github.com/hayatepy/create-hayate) | `0.4.3` | Composable and production application scaffolds | yes | [golden-app main CI](https://github.com/hayatepy/golden-app/actions/runs/30215926902) |
+| [`hayate-fetch`](https://github.com/hayatepy/hayate-fetch) | `0.1.3` | Portable WHATWG-style outbound fetch | downstream gate | [Hayate 0.12.1 downstream full compatibility CI](https://github.com/hayatepy/hayate/actions/runs/30238414785) |
+| [`hayate-mcp`](https://github.com/hayatepy/hayate-mcp) | `0.11.0` | MCP transport, tools, context, and OAuth resource server | yes | [golden-app main CI](https://github.com/hayatepy/golden-app/actions/runs/30238320780), [hayate-mcp 0.11.0 main CI](https://github.com/hayatepy/hayate-mcp/actions/runs/30215027370) |
+| [`hayate-openapi`](https://github.com/hayatepy/hayate-openapi) | `0.5.0` | OpenAPI 3.1 generation, Scalar, and typed-client contracts | yes | [golden-app main CI](https://github.com/hayatepy/golden-app/actions/runs/30238320780), [Hayate 0.12.1 downstream full compatibility CI](https://github.com/hayatepy/hayate/actions/runs/30238414785) |
+| [`hayate-sql`](https://github.com/hayatepy/hayate-sql) | `0.1.1` | Migration-checked SQL contracts and typed query facades | yes | [golden-app main CI](https://github.com/hayatepy/golden-app/actions/runs/30238320780) |
+| [`create-hayate`](https://github.com/hayatepy/create-hayate) | `0.7.0` | Composable and production application scaffolds | yes | [golden-app main CI](https://github.com/hayatepy/golden-app/actions/runs/30238320780), [create-hayate 0.7.0 full matrix (112/112)](https://github.com/hayatepy/create-hayate/actions/runs/30238513844), [create-hayate 0.7.0 release provenance](https://github.com/hayatepy/create-hayate/actions/runs/30237634563) |
 
 ## Runtime contracts
 
 | Runtime | Executed or supported contract | Status | Evidence |
 |---|---|---|---|
-| Direct | Pure application requests with local SQLite | Golden path | [golden-app main CI](https://github.com/hayatepy/golden-app/actions/runs/30215926902) |
-| ASGI | Real Uvicorn process with SQLite | Golden path | [golden-app main CI](https://github.com/hayatepy/golden-app/actions/runs/30215926902) |
-| Cloudflare Workers class | Real workerd, D1, RPC-capable WorkerEntrypoint, and class handlers | Golden default | [golden-app main CI](https://github.com/hayatepy/golden-app/actions/runs/30215926902), [Hayate 0.11.2 downstream full compatibility CI](https://github.com/hayatepy/hayate/actions/runs/30205457252) |
-| Cloudflare Workers global | Global fetch export without RPC or scheduled class handlers | HTTP-only compatibility mode | [Hayate 0.11.2 main CI](https://github.com/hayatepy/hayate/actions/runs/30204740083) |
-| AWS Lambda | API Gateway v2 adapter around the same application core | Core adapter; outside the golden production flow | [Hayate 0.11.2 main CI](https://github.com/hayatepy/hayate/actions/runs/30204740083) |
+| Direct | Pure application requests with local SQLite | Golden path | [golden-app main CI](https://github.com/hayatepy/golden-app/actions/runs/30238320780) |
+| ASGI | Real Uvicorn process with SQLite | Golden path | [golden-app main CI](https://github.com/hayatepy/golden-app/actions/runs/30238320780) |
+| Cloudflare Workers class | Real workerd, D1, RPC-capable WorkerEntrypoint, and class handlers | Golden default | [golden-app main CI](https://github.com/hayatepy/golden-app/actions/runs/30238320780), [Hayate 0.12.1 downstream full compatibility CI](https://github.com/hayatepy/hayate/actions/runs/30238414785) |
+| Cloudflare Workers global | Global fetch export without RPC or scheduled class handlers | HTTP-only compatibility mode | [golden-app main CI](https://github.com/hayatepy/golden-app/actions/runs/30238320780) |
+| AWS Lambda | API Gateway v2 adapter around the same application core | Core adapter; outside the golden production flow | [Hayate 0.12.1 main CI](https://github.com/hayatepy/hayate/actions/runs/30235859656) |
 
 ASGI is a deployment adapter, not a Cloudflare requirement. The Workers class
 entrypoint is the feature-complete default. The global entrypoint is HTTP-only
@@ -49,15 +49,17 @@ and does not imply named RPC or scheduled class-handler support.
 | `workers-py` | `1.15.0` |
 | `workers-runtime-sdk` | `1.6.3` |
 
-Golden lock SHA-256: `9fa53adb31a6ec33b480f2cc41a9b0237f24661ac94bf3545cf8cb5aac840c54`
+Golden lock SHA-256: `ae92a282f7158c00f1ff6cd29aae59fd0271b1a433220ee7a9ead89470416eb5`
 
 ## Evidence sources
 
-- [golden-app main CI](https://github.com/hayatepy/golden-app/actions/runs/30215926902) at `f20cf55f863337629bfb3fded1cb4b7b0f5169ab`
+- [golden-app main CI](https://github.com/hayatepy/golden-app/actions/runs/30238320780) at `b39b262908cc6d700800c9bb4f0f2fc8ab8827ed`
 - [hayate-auth 0.10.0 main CI](https://github.com/hayatepy/hayate-auth/actions/runs/30215082906) at `b885e066355196c9caeedb0819eee03fc4d119ed`
 - [hayate-auth 0.10.0 security profiles](https://github.com/hayatepy/hayate-auth/actions/runs/30215082913) at `b885e066355196c9caeedb0819eee03fc4d119ed`
 - [hayate-mcp 0.11.0 main CI](https://github.com/hayatepy/hayate-mcp/actions/runs/30215027370) at `20fbd3f7381d7695fdfaf0a0d1daf7d48109b106`
-- [Hayate 0.11.2 downstream full compatibility CI](https://github.com/hayatepy/hayate/actions/runs/30205457252) at `a80a9955603b128af7e496144e9d0b430453572b`
-- [Hayate 0.11.2 main CI](https://github.com/hayatepy/hayate/actions/runs/30204740083) at `a80a9955603b128af7e496144e9d0b430453572b`
+- [Hayate 0.12.1 downstream full compatibility CI](https://github.com/hayatepy/hayate/actions/runs/30238414785) at `07ab68863cabeed0bcc86d004dab308f155796dc`
+- [Hayate 0.12.1 main CI](https://github.com/hayatepy/hayate/actions/runs/30235859656) at `07ab68863cabeed0bcc86d004dab308f155796dc`
+- [create-hayate 0.7.0 full matrix (112/112)](https://github.com/hayatepy/create-hayate/actions/runs/30238513844) at `a0e828937191d9e0e1e948ad987bd80e48a4d8c4`; aggregate evidence SHA-256 `480662b03c6bd92059d59d32ca1cb016f13a53ef298c877247739fe54df86764`
+- [create-hayate 0.7.0 release provenance](https://github.com/hayatepy/create-hayate/actions/runs/30237634563) at `a0e828937191d9e0e1e948ad987bd80e48a4d8c4`
 
 Machine-readable data: [`compatibility.json`](../compatibility.json).
