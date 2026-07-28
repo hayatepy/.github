@@ -1,7 +1,7 @@
 <p align="center">
-  <a href="https://hayate-docs.yusuke8h.workers.dev/">
+  <a href="https://hayatepy.dev/">
     <img
-      src="https://hayate-docs.yusuke8h.workers.dev/assets/images/hayate-mark.png"
+      src="https://hayatepy.dev/assets/images/hayate-mark.png"
       width="160"
       height="160"
       alt="Hayate"
@@ -20,8 +20,8 @@ logic on a conventional Python server or directly inside Cloudflare workerd.
 
 ## Start here
 
-1. Read the [unified Hayate documentation](https://hayate-docs.yusuke8h.workers.dev/).
-2. [Build the first application](https://hayate-docs.yusuke8h.workers.dev/get-started/first-app/)
+1. Read the [unified Hayate documentation](https://hayatepy.dev/).
+2. [Build the first application](https://hayatepy.dev/get-started/first-app/)
    on ASGI, native Cloudflare Workers, or AWS Lambda.
 3. Use the [executable production golden app](https://github.com/hayatepy/golden-app)
    for Cloudflare Access, OpenAPI, MCP, checked SQL, operational administration,
