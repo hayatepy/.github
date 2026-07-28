@@ -24,8 +24,12 @@ jobs:
         with:
           python-version: "3.13"
           enable-cache: false
+      - run: python3 -m unittest discover -s tests
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
       - run: python3 scripts/check_evidence.py
       - run: python3 scripts/export_compatibility.py --check
+      - run: python3 scripts/export_profile.py --check
       - run: python3 scripts/check_links.py
       - run: bash scripts/check_start.sh
 
