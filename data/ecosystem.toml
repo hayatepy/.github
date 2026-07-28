@@ -37,9 +37,9 @@ url = "https://github.com/hayatepy/hayate-openapi/actions/runs/30261368101"
 commit = "5d274a7cc337c3336d5316421691779504e592f7"
 
 [sources.foliomcp_ci]
-label = "FolioMCP production Workerd CI"
-url = "https://github.com/yhay81/foliomcp-api/actions/runs/30261761976"
+label = "FolioMCP production Workerd CI (private downstream evidence)"
 commit = "a4d110efc223b5774278b21512e176f64f93d525"
+visibility = "private"
 
 [sources.ecosystem_full]
 label = "Hayate 0.15.1 downstream full compatibility CI"

@@ -65,13 +65,21 @@ def _load() -> dict[str, Any]:
 
 
 def _evidence_links(keys: list[str], sources: dict[str, dict[str, str]]) -> str:
-    return ", ".join(
-        f"[{sources[key]['label']}]({sources[key]['url']})" for key in keys
-    )
+    references: list[str] = []
+    for key in keys:
+        source = sources[key]
+        if url := source.get("url"):
+            references.append(f"[{source['label']}]({url})")
+        else:
+            references.append(f"{source['label']} at `{source['commit'][:12]}`")
+    return ", ".join(references)
 
 
 def _source_line(source: dict[str, str]) -> str:
-    line = f"- [{source['label']}]({source['url']}) at `{source['commit']}`"
+    if url := source.get("url"):
+        line = f"- [{source['label']}]({url}) at `{source['commit']}`"
+    else:
+        line = f"- {source['label']} at `{source['commit']}`"
     if artifact_sha256 := source.get("artifact_sha256"):
         line += f"; aggregate evidence SHA-256 `{artifact_sha256}`"
     return line

@@ -177,8 +177,8 @@
     },
     "foliomcp_ci": {
       "commit": "a4d110efc223b5774278b21512e176f64f93d525",
-      "label": "FolioMCP production Workerd CI",
-      "url": "https://github.com/yhay81/foliomcp-api/actions/runs/30261761976"
+      "label": "FolioMCP production Workerd CI (private downstream evidence)",
+      "visibility": "private"
     },
     "golden_app": {
       "commit": "bc07ff927ce5ca3533f0a006b9000098b9df6e25",
