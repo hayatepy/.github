@@ -4,6 +4,13 @@ mcp_revision = "2025-11-25"
 openapi_revision = "3.1.1"
 minimum_python = "3.12"
 
+[profile_evidence]
+as_of = "2026-07-28"
+commit = "9e27b0191c7fa9f920ad6fe5b126e190268afba2"
+benchmark_path = "benchmarks/competitive/results/2026-07-28-hayate-0.15.1-macos-arm64.json"
+benchmark_result_commit = "561bcf01874e7777b04917ff84e683afff264180"
+capabilities_path = "benchmarks/competitive/capabilities.json"
+
 [sources.golden_app]
 label = "golden-app main CI"
 url = "https://github.com/hayatepy/golden-app/actions/runs/30315193937"
