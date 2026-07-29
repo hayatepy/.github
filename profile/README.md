@@ -78,12 +78,13 @@ score. Feature breadth is evaluated separately and without a weighted winner:
   Django admin/ORM application under an ASGI prefix during incremental migration.
 - **JavaScript and TypeScript edge application — competitor advantaged.** Hono remains
   functionally ahead for multi-JavaScript-runtime reach and route-inferred TypeScript
-  RPC, and its JavaScript Workers runtime has materially better startup, memory, CPU,
-  and upload size than Python Workers.
+  RPC. Hayate now generates and executes a first-party zero-runtime Fetch client, while
+  Hono's JavaScript Workers runtime retains materially better startup, memory, CPU, and
+  upload size than Python Workers.
 
 Read the
-[immutable benchmark publication](https://github.com/hayatepy/hayate/blob/6d0bf1904db0c6893d15f9a7ce6a957a7114f061/benchmarks/competitive/results/2026-07-28-hayate-0.15.1-macos-arm64.md) and the dated, source-backed
-[capability matrix](https://github.com/hayatepy/hayate/blob/6d0bf1904db0c6893d15f9a7ce6a957a7114f061/docs/capabilities.md) for methodology, raw artifacts,
+[immutable benchmark publication](https://github.com/hayatepy/hayate/blob/5592276315c9b75e736d3fc204b4900e15f8867a/benchmarks/competitive/results/2026-07-28-hayate-0.15.1-macos-arm64.md) and the dated, source-backed
+[capability matrix](https://github.com/hayatepy/hayate/blob/5592276315c9b75e736d3fc204b4900e15f8867a/docs/capabilities.md) for methodology, raw artifacts,
 profile verdicts, and limitations.
 
 ## Choose by outcome

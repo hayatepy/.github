@@ -1,7 +1,7 @@
 {
   "as_of": "2026-07-30",
   "golden_runtime": {
-    "lock_sha256": "ac85300faf33912228958f288aca63604946238326997d55b5fe8d1d452c7563",
+    "lock_sha256": "400de843b728b759aafc6fa55f1a810021f4c08837dbc6677e33db1313b2bcd8",
     "node": "24",
     "platform_packages": [
       {
@@ -76,12 +76,13 @@
       "evidence": [
         "golden_app",
         "openapi_ci",
+        "openapi_release",
         "foliomcp_ci"
       ],
       "golden": true,
       "name": "hayate-openapi",
-      "role": "OpenAPI 3.1 generation, Scalar, and typed-client contracts",
-      "version": "0.7.0"
+      "role": "OpenAPI 3.1, Scalar, and generated zero-runtime TypeScript clients",
+      "version": "0.8.1"
     },
     {
       "evidence": [
@@ -102,8 +103,8 @@
       ],
       "golden": true,
       "name": "create-hayate",
-      "role": "Composable and production application scaffolds",
-      "version": "0.12.0"
+      "role": "Composable applications with drift-checked first-party TypeScript clients",
+      "version": "0.13.0"
     }
   ],
   "protocols": {
@@ -182,9 +183,9 @@
       "visibility": "private"
     },
     "golden_app": {
-      "commit": "a424e1417baa2830518ce696bb96130f34c90259",
-      "label": "golden-app MCP 2026-07-28 main CI",
-      "url": "https://github.com/hayatepy/golden-app/actions/runs/30483909302"
+      "commit": "842fd2486f3d8bd5c284e44e4f8528b0441a574a",
+      "label": "golden-app zero-runtime TypeScript client main CI",
+      "url": "https://github.com/hayatepy/golden-app/actions/runs/30488723553"
     },
     "mcp_ci": {
       "commit": "175e6ed85a5e9af3e2fd9fcbf8886594bd2f6723",
@@ -197,25 +198,30 @@
       "url": "https://github.com/hayatepy/hayate-mcp/actions/runs/30481707512"
     },
     "openapi_ci": {
-      "commit": "5d274a7cc337c3336d5316421691779504e592f7",
-      "label": "hayate-openapi 0.7.0 main CI",
-      "url": "https://github.com/hayatepy/hayate-openapi/actions/runs/30261368101"
+      "commit": "2ed34215ec3dd5ebd0a0780f7b7903f0b3492a78",
+      "label": "hayate-openapi 0.8.1 main CI and TypeScript interoperability",
+      "url": "https://github.com/hayatepy/hayate-openapi/actions/runs/30487122341"
+    },
+    "openapi_release": {
+      "commit": "2ed34215ec3dd5ebd0a0780f7b7903f0b3492a78",
+      "label": "hayate-openapi 0.8.1 release provenance",
+      "url": "https://github.com/hayatepy/hayate-openapi/actions/runs/30487193584"
     },
     "scaffold_ci": {
-      "commit": "a1974325ce62a4bce5c6ceab27211675e07b0001",
-      "label": "create-hayate 0.12.0 main CI (52/52 backend compositions)",
-      "url": "https://github.com/hayatepy/create-hayate/actions/runs/30483290732"
+      "commit": "9fdb98e5642ff047e04e24251be1c2747fc7572a",
+      "label": "create-hayate 0.13.0 main CI (52/52 backend compositions)",
+      "url": "https://github.com/hayatepy/create-hayate/actions/runs/30487719992"
     },
     "scaffold_matrix": {
-      "artifact_sha256": "ac4da7c9fe4dec4a5fad80db41833ee38049e4822c727cd674f19eca86e64e5f",
-      "commit": "a1974325ce62a4bce5c6ceab27211675e07b0001",
-      "label": "create-hayate 0.12.0 frontend matrix (112/112)",
-      "url": "https://github.com/hayatepy/create-hayate/actions/runs/30484131668"
+      "artifact_sha256": "fb3f4dc15e8d49bd1fdb6a658df70cc33e174a0f9342895f732dca8aa57a8bb9",
+      "commit": "9fdb98e5642ff047e04e24251be1c2747fc7572a",
+      "label": "create-hayate 0.13.0 frontend matrix (112/112)",
+      "url": "https://github.com/hayatepy/create-hayate/actions/runs/30488857568"
     },
     "scaffold_release": {
-      "commit": "a1974325ce62a4bce5c6ceab27211675e07b0001",
-      "label": "create-hayate 0.12.0 release provenance",
-      "url": "https://github.com/hayatepy/create-hayate/actions/runs/30483309952"
+      "commit": "9fdb98e5642ff047e04e24251be1c2747fc7572a",
+      "label": "create-hayate 0.13.0 release provenance",
+      "url": "https://github.com/hayatepy/create-hayate/actions/runs/30487823316"
     }
   }
 }

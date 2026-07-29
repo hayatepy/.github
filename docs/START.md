@@ -8,7 +8,7 @@ middleware.
 Install [uv](https://docs.astral.sh/uv/), then run:
 
 ```sh
-uvx --refresh --from create-hayate==0.12.0 create-hayate my-app --template workers --preset production
+uvx --refresh --from create-hayate==0.13.0 create-hayate my-app --template workers --preset production
 cd my-app
 uv sync
 test -f uv.lock

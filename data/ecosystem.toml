@@ -7,15 +7,15 @@ minimum_python = "3.12"
 [profile_evidence]
 benchmark_as_of = "2026-07-28"
 capabilities_as_of = "2026-07-30"
-commit = "6d0bf1904db0c6893d15f9a7ce6a957a7114f061"
+commit = "5592276315c9b75e736d3fc204b4900e15f8867a"
 benchmark_path = "benchmarks/competitive/results/2026-07-28-hayate-0.15.1-macos-arm64.json"
 benchmark_result_commit = "561bcf01874e7777b04917ff84e683afff264180"
 capabilities_path = "benchmarks/competitive/capabilities.json"
 
 [sources.golden_app]
-label = "golden-app MCP 2026-07-28 main CI"
-url = "https://github.com/hayatepy/golden-app/actions/runs/30483909302"
-commit = "a424e1417baa2830518ce696bb96130f34c90259"
+label = "golden-app zero-runtime TypeScript client main CI"
+url = "https://github.com/hayatepy/golden-app/actions/runs/30488723553"
+commit = "842fd2486f3d8bd5c284e44e4f8528b0441a574a"
 
 [sources.auth_ci]
 label = "hayate-auth 0.10.1 main CI"
@@ -38,9 +38,14 @@ url = "https://github.com/hayatepy/hayate-mcp/actions/runs/30481707512"
 commit = "175e6ed85a5e9af3e2fd9fcbf8886594bd2f6723"
 
 [sources.openapi_ci]
-label = "hayate-openapi 0.7.0 main CI"
-url = "https://github.com/hayatepy/hayate-openapi/actions/runs/30261368101"
-commit = "5d274a7cc337c3336d5316421691779504e592f7"
+label = "hayate-openapi 0.8.1 main CI and TypeScript interoperability"
+url = "https://github.com/hayatepy/hayate-openapi/actions/runs/30487122341"
+commit = "2ed34215ec3dd5ebd0a0780f7b7903f0b3492a78"
+
+[sources.openapi_release]
+label = "hayate-openapi 0.8.1 release provenance"
+url = "https://github.com/hayatepy/hayate-openapi/actions/runs/30487193584"
+commit = "2ed34215ec3dd5ebd0a0780f7b7903f0b3492a78"
 
 [sources.foliomcp_ci]
 label = "FolioMCP production Workerd CI (private downstream evidence)"
@@ -58,20 +63,20 @@ url = "https://github.com/hayatepy/hayate/actions/runs/30314505506"
 commit = "9e27b0191c7fa9f920ad6fe5b126e190268afba2"
 
 [sources.scaffold_ci]
-label = "create-hayate 0.12.0 main CI (52/52 backend compositions)"
-url = "https://github.com/hayatepy/create-hayate/actions/runs/30483290732"
-commit = "a1974325ce62a4bce5c6ceab27211675e07b0001"
+label = "create-hayate 0.13.0 main CI (52/52 backend compositions)"
+url = "https://github.com/hayatepy/create-hayate/actions/runs/30487719992"
+commit = "9fdb98e5642ff047e04e24251be1c2747fc7572a"
 
 [sources.scaffold_matrix]
-label = "create-hayate 0.12.0 frontend matrix (112/112)"
-url = "https://github.com/hayatepy/create-hayate/actions/runs/30484131668"
-commit = "a1974325ce62a4bce5c6ceab27211675e07b0001"
-artifact_sha256 = "ac4da7c9fe4dec4a5fad80db41833ee38049e4822c727cd674f19eca86e64e5f"
+label = "create-hayate 0.13.0 frontend matrix (112/112)"
+url = "https://github.com/hayatepy/create-hayate/actions/runs/30488857568"
+commit = "9fdb98e5642ff047e04e24251be1c2747fc7572a"
+artifact_sha256 = "fb3f4dc15e8d49bd1fdb6a658df70cc33e174a0f9342895f732dca8aa57a8bb9"
 
 [sources.scaffold_release]
-label = "create-hayate 0.12.0 release provenance"
-url = "https://github.com/hayatepy/create-hayate/actions/runs/30483309952"
-commit = "a1974325ce62a4bce5c6ceab27211675e07b0001"
+label = "create-hayate 0.13.0 release provenance"
+url = "https://github.com/hayatepy/create-hayate/actions/runs/30487823316"
+commit = "9fdb98e5642ff047e04e24251be1c2747fc7572a"
 
 [[packages]]
 name = "hayate"
@@ -103,10 +108,10 @@ evidence = ["golden_app", "mcp_ci", "mcp_release", "foliomcp_ci"]
 
 [[packages]]
 name = "hayate-openapi"
-version = "0.7.0"
-role = "OpenAPI 3.1 generation, Scalar, and typed-client contracts"
+version = "0.8.1"
+role = "OpenAPI 3.1, Scalar, and generated zero-runtime TypeScript clients"
 golden = true
-evidence = ["golden_app", "openapi_ci", "foliomcp_ci"]
+evidence = ["golden_app", "openapi_ci", "openapi_release", "foliomcp_ci"]
 
 [[packages]]
 name = "hayate-sql"
@@ -117,8 +122,8 @@ evidence = ["golden_app", "foliomcp_ci"]
 
 [[packages]]
 name = "create-hayate"
-version = "0.12.0"
-role = "Composable and production application scaffolds"
+version = "0.13.0"
+role = "Composable applications with drift-checked first-party TypeScript clients"
 golden = true
 evidence = ["golden_app", "scaffold_ci", "scaffold_matrix", "scaffold_release"]
 
