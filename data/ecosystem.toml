@@ -13,19 +13,19 @@ benchmark_result_commit = "561bcf01874e7777b04917ff84e683afff264180"
 capabilities_path = "benchmarks/competitive/capabilities.json"
 
 [sources.golden_app]
-label = "golden-app zero-runtime TypeScript client main CI"
-url = "https://github.com/hayatepy/golden-app/actions/runs/30488723553"
-commit = "842fd2486f3d8bd5c284e44e4f8528b0441a574a"
+label = "golden-app create-hayate 0.13.1 main CI"
+url = "https://github.com/hayatepy/golden-app/actions/runs/30494459938"
+commit = "cfa07c1d129b588b3c539a6d6c9fcdd443cefbf7"
 
 [sources.auth_ci]
-label = "hayate-auth 0.10.1 main CI"
-url = "https://github.com/hayatepy/hayate-auth/actions/runs/30271019764"
-commit = "eff705c335d0903084988edea5b783be258f42e8"
+label = "hayate-auth 0.10.3 main CI"
+url = "https://github.com/hayatepy/hayate-auth/actions/runs/30493342017"
+commit = "20dd7ae08c12051d23fdbe4b242578f800dacdfc"
 
 [sources.auth_security]
-label = "hayate-auth 0.10.1 security profiles"
-url = "https://github.com/hayatepy/hayate-auth/actions/runs/30271019713"
-commit = "eff705c335d0903084988edea5b783be258f42e8"
+label = "hayate-auth 0.10.3 security profiles"
+url = "https://github.com/hayatepy/hayate-auth/actions/runs/30493342021"
+commit = "20dd7ae08c12051d23fdbe4b242578f800dacdfc"
 
 [sources.mcp_ci]
 label = "hayate-mcp 0.12.0 main CI and conformance"
@@ -63,20 +63,20 @@ url = "https://github.com/hayatepy/hayate/actions/runs/30314505506"
 commit = "9e27b0191c7fa9f920ad6fe5b126e190268afba2"
 
 [sources.scaffold_ci]
-label = "create-hayate 0.13.0 main CI (52/52 backend compositions)"
-url = "https://github.com/hayatepy/create-hayate/actions/runs/30487719992"
-commit = "9fdb98e5642ff047e04e24251be1c2747fc7572a"
+label = "create-hayate 0.13.1 main CI (52/52 backend compositions)"
+url = "https://github.com/hayatepy/create-hayate/actions/runs/30493342848"
+commit = "97d19b59e1256ec6d50e9ecb725296442fda4b20"
 
 [sources.scaffold_matrix]
-label = "create-hayate 0.13.0 frontend matrix (112/112)"
-url = "https://github.com/hayatepy/create-hayate/actions/runs/30488857568"
-commit = "9fdb98e5642ff047e04e24251be1c2747fc7572a"
-artifact_sha256 = "fb3f4dc15e8d49bd1fdb6a658df70cc33e174a0f9342895f732dca8aa57a8bb9"
+label = "create-hayate 0.13.1 frontend matrix (112/112)"
+url = "https://github.com/hayatepy/create-hayate/actions/runs/30493092512"
+commit = "c19d726656ed0b7a88634c761426698501e241a6"
+artifact_sha256 = "f7be85bf13c135c9c112c3cb504c337f3e0fbad501fe575425ad69be898a84df"
 
 [sources.scaffold_release]
-label = "create-hayate 0.13.0 release provenance"
-url = "https://github.com/hayatepy/create-hayate/actions/runs/30487823316"
-commit = "9fdb98e5642ff047e04e24251be1c2747fc7572a"
+label = "create-hayate 0.13.1 release provenance"
+url = "https://github.com/hayatepy/create-hayate/actions/runs/30493486890"
+commit = "97d19b59e1256ec6d50e9ecb725296442fda4b20"
 
 [[packages]]
 name = "hayate"
@@ -87,7 +87,7 @@ evidence = ["golden_app", "ecosystem_full"]
 
 [[packages]]
 name = "hayate-auth"
-version = "0.10.1"
+version = "0.10.3"
 role = "Sessions, API keys, OAuth clients, and authorization server"
 golden = false
 evidence = ["auth_ci", "auth_security"]
@@ -122,7 +122,7 @@ evidence = ["golden_app", "foliomcp_ci"]
 
 [[packages]]
 name = "create-hayate"
-version = "0.13.0"
+version = "0.13.1"
 role = "Composable applications with drift-checked first-party TypeScript clients"
 golden = true
 evidence = ["golden_app", "scaffold_ci", "scaffold_matrix", "scaffold_release"]
