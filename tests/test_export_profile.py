@@ -52,7 +52,7 @@ def capabilities() -> dict[str, object]:
     }
     return {
         "schema_version": 1,
-        "as_of": "2026-07-28",
+        "as_of": "2026-07-30",
         "universal_winner": None,
         "profiles": [
             {
@@ -68,7 +68,8 @@ def capabilities() -> dict[str, object]:
 
 def source() -> dict[str, str]:
     return {
-        "as_of": "2026-07-28",
+        "benchmark_as_of": "2026-07-28",
+        "capabilities_as_of": "2026-07-30",
         "benchmark_result_commit": "result",
     }
 

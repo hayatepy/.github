@@ -110,7 +110,7 @@ def _validate(
 
     if capabilities.get("schema_version") != 1:
         raise ValueError("unsupported capability schema")
-    if capabilities.get("as_of") != source["as_of"]:
+    if capabilities.get("as_of") != source["capabilities_as_of"]:
         raise ValueError("capability evidence date does not match manifest")
     if capabilities.get("universal_winner") is not None:
         raise ValueError("organization profile must not publish a universal winner")
@@ -280,7 +280,7 @@ def main() -> int:
         benchmark,
         capabilities,
         links,
-        benchmark_date=manifest["profile_evidence"]["as_of"],
+        benchmark_date=manifest["profile_evidence"]["benchmark_as_of"],
     )
     if args.check:
         if not OUTPUT.exists() or OUTPUT.read_text(encoding="utf-8") != expected:

@@ -61,7 +61,7 @@ score. Feature breadth is evaluated separately and without a weighted winner:
 - **Portable Python agent API — Hayate advantaged.** Hayate has the clearest first-party
   path when one Python application must run on ASGI, native Cloudflare Workers, and
   buffered or response-streaming AWS Lambda HTTP payload v2 while combining typed HTTP
-  contracts, cached dependency graphs, MCP 2025-11-25, authorization, and checked
+  contracts, cached dependency graphs, MCP 2026-07-28, authorization, and checked
   SQLite/D1 access.
 - **Conventional typed Python API — competitive.** Hayate now meets FastAPI's central
   typed request/response, OpenAPI, dependency-graph, direct-test, realtime, lifecycle,
@@ -82,8 +82,8 @@ score. Feature breadth is evaluated separately and without a weighted winner:
   and upload size than Python Workers.
 
 Read the
-[immutable benchmark publication](https://github.com/hayatepy/hayate/blob/9e27b0191c7fa9f920ad6fe5b126e190268afba2/benchmarks/competitive/results/2026-07-28-hayate-0.15.1-macos-arm64.md) and the dated, source-backed
-[capability matrix](https://github.com/hayatepy/hayate/blob/9e27b0191c7fa9f920ad6fe5b126e190268afba2/docs/capabilities.md) for methodology, raw artifacts,
+[immutable benchmark publication](https://github.com/hayatepy/hayate/blob/6d0bf1904db0c6893d15f9a7ce6a957a7114f061/benchmarks/competitive/results/2026-07-28-hayate-0.15.1-macos-arm64.md) and the dated, source-backed
+[capability matrix](https://github.com/hayatepy/hayate/blob/6d0bf1904db0c6893d15f9a7ce6a957a7114f061/docs/capabilities.md) for methodology, raw artifacts,
 profile verdicts, and limitations.
 
 ## Choose by outcome
@@ -92,7 +92,7 @@ profile verdicts, and limitations.
 |---|---|
 | Build a web API on ASGI, Workers, or Lambda | [`hayate`](https://github.com/hayatepy/hayate) |
 | Generate OpenAPI 3.1 and typed clients | [`hayate-openapi`](https://github.com/hayatepy/hayate-openapi) |
-| Expose MCP 2025-11-25 tools | [`hayate-mcp`](https://github.com/hayatepy/hayate-mcp) |
+| Expose MCP 2026-07-28 tools | [`hayate-mcp`](https://github.com/hayatepy/hayate-mcp) |
 | Add sessions, API keys, OAuth, or an authorization server | [`hayate-auth`](https://github.com/hayatepy/hayate-auth) |
 | Use checked SQL with PostgreSQL, SQLite, or D1 | [`hayate-sql`](https://github.com/hayatepy/hayate-sql) |
 | Make portable outbound requests | [`hayate-fetch`](https://github.com/hayatepy/hayate-fetch) |

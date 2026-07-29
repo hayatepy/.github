@@ -61,7 +61,7 @@ profile verdicts, and limitations.
 |---|---|
 | Build a web API on ASGI, Workers, or Lambda | [`hayate`](https://github.com/hayatepy/hayate) |
 | Generate OpenAPI 3.1 and typed clients | [`hayate-openapi`](https://github.com/hayatepy/hayate-openapi) |
-| Expose MCP 2025-11-25 tools | [`hayate-mcp`](https://github.com/hayatepy/hayate-mcp) |
+| Expose MCP 2026-07-28 tools | [`hayate-mcp`](https://github.com/hayatepy/hayate-mcp) |
 | Add sessions, API keys, OAuth, or an authorization server | [`hayate-auth`](https://github.com/hayatepy/hayate-auth) |
 | Use checked SQL with PostgreSQL, SQLite, or D1 | [`hayate-sql`](https://github.com/hayatepy/hayate-sql) |
 | Make portable outbound requests | [`hayate-fetch`](https://github.com/hayatepy/hayate-fetch) |
