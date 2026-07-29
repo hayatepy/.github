@@ -45,8 +45,10 @@ body:
       description: Select every package you expect to evaluate.
       options:
         - label: hayate
+        - label: hayate-admin
         - label: hayate-auth
         - label: hayate-fetch
+        - label: hayate-htmx
         - label: hayate-mcp
         - label: hayate-openapi
         - label: hayate-sql
