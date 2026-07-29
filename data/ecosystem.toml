@@ -18,14 +18,19 @@ url = "https://github.com/hayatepy/golden-app/actions/runs/30494459938"
 commit = "cfa07c1d129b588b3c539a6d6c9fcdd443cefbf7"
 
 [sources.auth_ci]
-label = "hayate-auth 0.10.3 main CI"
-url = "https://github.com/hayatepy/hayate-auth/actions/runs/30493342017"
-commit = "20dd7ae08c12051d23fdbe4b242578f800dacdfc"
+label = "hayate-auth 0.10.4 main CI"
+url = "https://github.com/hayatepy/hayate-auth/actions/runs/30498321148"
+commit = "938751d0f225def770d6ae47e1da3da40829c8d1"
 
 [sources.auth_security]
-label = "hayate-auth 0.10.3 security profiles"
-url = "https://github.com/hayatepy/hayate-auth/actions/runs/30493342021"
-commit = "20dd7ae08c12051d23fdbe4b242578f800dacdfc"
+label = "hayate-auth 0.10.4 security profiles"
+url = "https://github.com/hayatepy/hayate-auth/actions/runs/30498321150"
+commit = "938751d0f225def770d6ae47e1da3da40829c8d1"
+
+[sources.auth_release]
+label = "hayate-auth 0.10.4 release provenance"
+url = "https://github.com/hayatepy/hayate-auth/actions/runs/30498396435"
+commit = "938751d0f225def770d6ae47e1da3da40829c8d1"
 
 [sources.mcp_ci]
 label = "hayate-mcp 0.12.0 main CI and conformance"
@@ -87,10 +92,10 @@ evidence = ["golden_app", "ecosystem_full"]
 
 [[packages]]
 name = "hayate-auth"
-version = "0.10.3"
+version = "0.10.4"
 role = "Sessions, API keys, OAuth clients, and authorization server"
 golden = false
-evidence = ["auth_ci", "auth_security"]
+evidence = ["auth_ci", "auth_security", "auth_release"]
 
 [[packages]]
 name = "hayate-fetch"

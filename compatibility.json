@@ -44,12 +44,13 @@
     {
       "evidence": [
         "auth_ci",
-        "auth_security"
+        "auth_security",
+        "auth_release"
       ],
       "golden": false,
       "name": "hayate-auth",
       "role": "Sessions, API keys, OAuth clients, and authorization server",
-      "version": "0.10.3"
+      "version": "0.10.4"
     },
     {
       "evidence": [
@@ -158,14 +159,19 @@
   "schema_version": 1,
   "sources": {
     "auth_ci": {
-      "commit": "20dd7ae08c12051d23fdbe4b242578f800dacdfc",
-      "label": "hayate-auth 0.10.3 main CI",
-      "url": "https://github.com/hayatepy/hayate-auth/actions/runs/30493342017"
+      "commit": "938751d0f225def770d6ae47e1da3da40829c8d1",
+      "label": "hayate-auth 0.10.4 main CI",
+      "url": "https://github.com/hayatepy/hayate-auth/actions/runs/30498321148"
+    },
+    "auth_release": {
+      "commit": "938751d0f225def770d6ae47e1da3da40829c8d1",
+      "label": "hayate-auth 0.10.4 release provenance",
+      "url": "https://github.com/hayatepy/hayate-auth/actions/runs/30498396435"
     },
     "auth_security": {
-      "commit": "20dd7ae08c12051d23fdbe4b242578f800dacdfc",
-      "label": "hayate-auth 0.10.3 security profiles",
-      "url": "https://github.com/hayatepy/hayate-auth/actions/runs/30493342021"
+      "commit": "938751d0f225def770d6ae47e1da3da40829c8d1",
+      "label": "hayate-auth 0.10.4 security profiles",
+      "url": "https://github.com/hayatepy/hayate-auth/actions/runs/30498321150"
     },
     "core_ci": {
       "commit": "9e27b0191c7fa9f920ad6fe5b126e190268afba2",
