@@ -10,7 +10,7 @@ data.
 | Outcome | Production reference |
 |---|---|
 | Portable HTTP application | Hayate core in the golden app |
-| OpenAPI and TypeScript client | Checked `openapi.json` and `client/api-types.ts` |
+| OpenAPI and TypeScript client | Checked `openapi.json`, `client/api-types.ts`, and zero-runtime `client/api-client.ts`; strict real-ASGI execution |
 | Agent tools | MCP 2026-07-28 initialize, discovery, and `tools/call` E2E |
 | Request identity | Fail-closed Cloudflare Access JWT/JWKS verification |
 | Data access | Migration-checked SQL over SQLite locally and D1 on Workers |
