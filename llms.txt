@@ -24,7 +24,7 @@ Packages:
 - hayate: framework and runtime adapters
 - create-hayate: composable and production scaffolds
 - hayate-openapi: OpenAPI 3.1.1, Scalar, and typed-client contracts
-- hayate-mcp: MCP 2025-11-25 transport, tools, context, and OAuth resource server
+- hayate-mcp: MCP 2026-07-28 transport, tools, context, discovery, and OAuth resource server
 - hayate-auth: sessions, API keys, OAuth clients, and authorization server
 - hayate-sql: migration-checked SQL and typed query facades
 - hayate-fetch: portable outbound WHATWG-style fetch
@@ -35,7 +35,7 @@ Implementation rules:
 - Use the WorkerEntrypoint class as the feature-complete Workers default.
 - Treat the optional global Workers export as HTTP-only; it does not support
   named RPC methods or scheduled class handlers.
-- Negotiate MCP revision 2025-11-25 and preserve request identity across HTTP
+- Negotiate MCP revision 2026-07-28 and preserve request identity across HTTP
   and MCP tool calls.
 - Keep SQL in checked query files and apply production migrations separately.
 - Fail closed when production identity or platform bindings are missing.

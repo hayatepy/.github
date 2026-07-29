@@ -11,7 +11,7 @@ data.
 |---|---|
 | Portable HTTP application | Hayate core in the golden app |
 | OpenAPI and TypeScript client | Checked `openapi.json` and `client/api-types.ts` |
-| Agent tools | MCP 2025-11-25 initialize and `tools/call` E2E |
+| Agent tools | MCP 2026-07-28 initialize, discovery, and `tools/call` E2E |
 | Request identity | Fail-closed Cloudflare Access JWT/JWKS verification |
 | Data access | Migration-checked SQL over SQLite locally and D1 on Workers |
 | Browser boundary | Exact-origin CORS, security headers, and a 1 MiB body limit |

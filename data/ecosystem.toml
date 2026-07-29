@@ -1,20 +1,21 @@
 schema_version = 1
-as_of = "2026-07-28"
-mcp_revision = "2025-11-25"
+as_of = "2026-07-30"
+mcp_revision = "2026-07-28"
 openapi_revision = "3.1.1"
 minimum_python = "3.12"
 
 [profile_evidence]
-as_of = "2026-07-28"
-commit = "9e27b0191c7fa9f920ad6fe5b126e190268afba2"
+benchmark_as_of = "2026-07-28"
+capabilities_as_of = "2026-07-30"
+commit = "6d0bf1904db0c6893d15f9a7ce6a957a7114f061"
 benchmark_path = "benchmarks/competitive/results/2026-07-28-hayate-0.15.1-macos-arm64.json"
 benchmark_result_commit = "561bcf01874e7777b04917ff84e683afff264180"
 capabilities_path = "benchmarks/competitive/capabilities.json"
 
 [sources.golden_app]
-label = "golden-app main CI"
-url = "https://github.com/hayatepy/golden-app/actions/runs/30315193937"
-commit = "bc07ff927ce5ca3533f0a006b9000098b9df6e25"
+label = "golden-app MCP 2026-07-28 main CI"
+url = "https://github.com/hayatepy/golden-app/actions/runs/30483909302"
+commit = "a424e1417baa2830518ce696bb96130f34c90259"
 
 [sources.auth_ci]
 label = "hayate-auth 0.10.1 main CI"
@@ -27,9 +28,14 @@ url = "https://github.com/hayatepy/hayate-auth/actions/runs/30271019713"
 commit = "eff705c335d0903084988edea5b783be258f42e8"
 
 [sources.mcp_ci]
-label = "hayate-mcp 0.11.1 main CI"
-url = "https://github.com/hayatepy/hayate-mcp/actions/runs/30246879078"
-commit = "c1f42c55d47a68fc935460e4a8c07e262a1a7e56"
+label = "hayate-mcp 0.12.0 main CI and conformance"
+url = "https://github.com/hayatepy/hayate-mcp/actions/runs/30481675199"
+commit = "175e6ed85a5e9af3e2fd9fcbf8886594bd2f6723"
+
+[sources.mcp_release]
+label = "hayate-mcp 0.12.0 release provenance"
+url = "https://github.com/hayatepy/hayate-mcp/actions/runs/30481707512"
+commit = "175e6ed85a5e9af3e2fd9fcbf8886594bd2f6723"
 
 [sources.openapi_ci]
 label = "hayate-openapi 0.7.0 main CI"
@@ -52,20 +58,20 @@ url = "https://github.com/hayatepy/hayate/actions/runs/30314505506"
 commit = "9e27b0191c7fa9f920ad6fe5b126e190268afba2"
 
 [sources.scaffold_ci]
-label = "create-hayate 0.11.1 main CI (52/52 backend compositions)"
-url = "https://github.com/hayatepy/create-hayate/actions/runs/30310444350"
-commit = "c3d3f9caf5ff422f508d789e2f3a72b28f363cda"
+label = "create-hayate 0.12.0 main CI (52/52 backend compositions)"
+url = "https://github.com/hayatepy/create-hayate/actions/runs/30483290732"
+commit = "a1974325ce62a4bce5c6ceab27211675e07b0001"
 
 [sources.scaffold_matrix]
-label = "create-hayate 0.11.1 frontend matrix (112/112)"
-url = "https://github.com/hayatepy/create-hayate/actions/runs/30315312815"
-commit = "c3d3f9caf5ff422f508d789e2f3a72b28f363cda"
-artifact_sha256 = "292cf716aff9ccec42949ad5731f9fc4b70946cbe2754ffde298b30d42fd2639"
+label = "create-hayate 0.12.0 frontend matrix (112/112)"
+url = "https://github.com/hayatepy/create-hayate/actions/runs/30484131668"
+commit = "a1974325ce62a4bce5c6ceab27211675e07b0001"
+artifact_sha256 = "ac4da7c9fe4dec4a5fad80db41833ee38049e4822c727cd674f19eca86e64e5f"
 
 [sources.scaffold_release]
-label = "create-hayate 0.11.1 release provenance"
-url = "https://github.com/hayatepy/create-hayate/actions/runs/30309786799"
-commit = "4dc358ec4f0e71c70195d3e0f5ea5b8ad76c3f90"
+label = "create-hayate 0.12.0 release provenance"
+url = "https://github.com/hayatepy/create-hayate/actions/runs/30483309952"
+commit = "a1974325ce62a4bce5c6ceab27211675e07b0001"
 
 [[packages]]
 name = "hayate"
@@ -90,10 +96,10 @@ evidence = ["ecosystem_full"]
 
 [[packages]]
 name = "hayate-mcp"
-version = "0.11.1"
+version = "0.12.0"
 role = "MCP transport, tools, context, and OAuth resource server"
 golden = true
-evidence = ["golden_app", "mcp_ci", "foliomcp_ci"]
+evidence = ["golden_app", "mcp_ci", "mcp_release", "foliomcp_ci"]
 
 [[packages]]
 name = "hayate-openapi"
@@ -111,7 +117,7 @@ evidence = ["golden_app", "foliomcp_ci"]
 
 [[packages]]
 name = "create-hayate"
-version = "0.11.1"
+version = "0.12.0"
 role = "Composable and production application scaffolds"
 golden = true
 evidence = ["golden_app", "scaffold_ci", "scaffold_matrix", "scaffold_release"]

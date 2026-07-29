@@ -2,13 +2,13 @@
 
 This is the canonical first path. It produces a tested application with one
 core for ASGI/SQLite and Cloudflare Workers/D1, plus OpenAPI 3.1.1, MCP
-2025-11-25, Cloudflare Access integration, checked SQL, and production
+2026-07-28, Cloudflare Access integration, checked SQL, and production
 middleware.
 
 Install [uv](https://docs.astral.sh/uv/), then run:
 
 ```sh
-uvx --refresh --from create-hayate==0.11.1 create-hayate my-app --template workers --preset production
+uvx --refresh --from create-hayate==0.12.0 create-hayate my-app --template workers --preset production
 cd my-app
 uv sync
 test -f uv.lock
