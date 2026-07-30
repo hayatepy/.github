@@ -1,0 +1,45 @@
+schema_version = 1
+minimum_scaffold_version = "0.13.2"
+canonical_home = "https://hayatepy.dev/"
+canonical_compatibility = "https://hayatepy.dev/evidence/compatibility/"
+superseded_prefixes = [
+  "https://hayatepy.github.io/",
+  "https://github.com/hayatepy/.github/blob/main/docs/START.md",
+  "https://github.com/hayatepy/.github/blob/main/docs/COMPATIBILITY.md",
+]
+
+[[repositories]]
+name = "hayate"
+homepage = "https://hayatepy.dev/"
+
+[[repositories]]
+name = "create-hayate"
+homepage = "https://hayatepy.dev/get-started/first-app/"
+
+[[repositories]]
+name = "hayate-admin"
+homepage = "https://hayatepy.dev/ecosystem/#hayate-admin"
+
+[[repositories]]
+name = "hayate-auth"
+homepage = "https://hayatepy.dev/ecosystem/#hayate-auth"
+
+[[repositories]]
+name = "hayate-fetch"
+homepage = "https://hayatepy.dev/ecosystem/#hayate-fetch"
+
+[[repositories]]
+name = "hayate-htmx"
+homepage = "https://hayatepy.dev/ecosystem/#hayate-htmx"
+
+[[repositories]]
+name = "hayate-mcp"
+homepage = "https://hayatepy.dev/ecosystem/#hayate-mcp"
+
+[[repositories]]
+name = "hayate-openapi"
+homepage = "https://hayatepy.dev/ecosystem/#hayate-openapi"
+
+[[repositories]]
+name = "hayate-sql"
+homepage = "https://hayatepy.dev/ecosystem/#hayate-sql"
