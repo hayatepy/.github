@@ -28,12 +28,12 @@ logic on a conventional Python server or directly inside Cloudflare workerd.
 3. Use the [executable production golden app](https://github.com/hayatepy/golden-app)
    for Cloudflare Access, OpenAPI, MCP, checked SQL, operational administration,
    SQLite/D1, and deployment.
-4. Check the [generated compatibility evidence](https://github.com/hayatepy/.github/blob/main/docs/COMPATIBILITY.md)
+4. Check the [generated compatibility evidence](https://hayatepy.dev/evidence/compatibility/)
    before selecting versions or runtimes.
 
 Building a real API, MCP backend, or Workers application? Help shape the v1
 contract through the bounded
-[design-partner program](https://github.com/hayatepy/.github/blob/main/docs/DESIGN_PARTNERS.md).
+[design-partner program](https://hayatepy.dev/contribute/#design-partners).
 
 ## Why Hayate
 
