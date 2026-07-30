@@ -9,7 +9,7 @@ body:
         This issue is public. Share only high-level, non-confidential information.
         Do not include credentials, customer data, proprietary code, unreleased
         product details, or security vulnerabilities. Read the
-        [program description](https://github.com/hayatepy/.github/blob/main/docs/DESIGN_PARTNERS.md)
+        [program description](https://hayatepy.dev/contribute/#design-partners)
         before applying.
   - type: dropdown
     id: track

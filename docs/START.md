@@ -5,10 +5,12 @@ core for ASGI/SQLite and Cloudflare Workers/D1, plus OpenAPI 3.1.1, MCP
 2026-07-28, Cloudflare Access integration, checked SQL, and production
 middleware.
 
+Rendered guide: <https://hayatepy.dev/get-started/first-app/>
+
 Install [uv](https://docs.astral.sh/uv/), then run:
 
 ```sh
-uvx --refresh --from create-hayate==0.13.1 create-hayate my-app --template workers --preset production
+uvx --refresh --from create-hayate==0.13.2 create-hayate my-app --template workers --preset production
 cd my-app
 uv sync
 test -f uv.lock
