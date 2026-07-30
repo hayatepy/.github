@@ -31,6 +31,7 @@ jobs:
       - run: python3 scripts/export_compatibility.py --check
       - run: python3 scripts/export_profile.py --check
       - run: python3 scripts/check_links.py
+      - run: python3 scripts/check_ecosystem_discovery.py
       - run: bash scripts/check_start.sh
 
   lint-workflows:

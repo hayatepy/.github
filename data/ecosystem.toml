@@ -14,23 +14,33 @@ capabilities_path = "benchmarks/competitive/capabilities.json"
 
 [sources.golden_app]
 label = "golden-app release lock main CI"
-url = "https://github.com/hayatepy/golden-app/actions/runs/30504943669"
-commit = "87e8e907c769ffc5ff24926470eb1ec7641f63b5"
+url = "https://github.com/hayatepy/golden-app/actions/runs/30507749113"
+commit = "381c071f108e29b16eae6b19b7f870a4fc3f18a9"
 
 [sources.auth_ci]
-label = "hayate-auth 0.10.4 main CI"
-url = "https://github.com/hayatepy/hayate-auth/actions/runs/30498321148"
-commit = "938751d0f225def770d6ae47e1da3da40829c8d1"
+label = "hayate-auth 0.10.5 main CI"
+url = "https://github.com/hayatepy/hayate-auth/actions/runs/30506737850"
+commit = "4189e735844a06377e9aa7eea2a731d09e500449"
 
 [sources.auth_security]
-label = "hayate-auth 0.10.4 security profiles"
-url = "https://github.com/hayatepy/hayate-auth/actions/runs/30498321150"
-commit = "938751d0f225def770d6ae47e1da3da40829c8d1"
+label = "hayate-auth 0.10.5 security profiles"
+url = "https://github.com/hayatepy/hayate-auth/actions/runs/30506737869"
+commit = "4189e735844a06377e9aa7eea2a731d09e500449"
 
 [sources.auth_release]
-label = "hayate-auth 0.10.4 release provenance"
-url = "https://github.com/hayatepy/hayate-auth/actions/runs/30498396435"
-commit = "938751d0f225def770d6ae47e1da3da40829c8d1"
+label = "hayate-auth 0.10.5 release provenance"
+url = "https://github.com/hayatepy/hayate-auth/actions/runs/30506830212"
+commit = "4189e735844a06377e9aa7eea2a731d09e500449"
+
+[sources.fetch_ci]
+label = "hayate-fetch 0.1.4 main CI"
+url = "https://github.com/hayatepy/hayate-fetch/actions/runs/30506644434"
+commit = "c684291e0fcc1067d9cf4548370c50fb68678a67"
+
+[sources.fetch_release]
+label = "hayate-fetch 0.1.4 release provenance"
+url = "https://github.com/hayatepy/hayate-fetch/actions/runs/30506781911"
+commit = "c684291e0fcc1067d9cf4548370c50fb68678a67"
 
 [sources.mcp_ci]
 label = "hayate-mcp 0.12.1 main CI and MCP 2026-07-28 conformance"
@@ -43,14 +53,24 @@ url = "https://github.com/hayatepy/hayate-mcp/actions/runs/30504320516"
 commit = "249b2df4bc41a0603e168b22c53815e31d2d5711"
 
 [sources.openapi_ci]
-label = "hayate-openapi 0.8.1 main CI and TypeScript interoperability"
-url = "https://github.com/hayatepy/hayate-openapi/actions/runs/30487122341"
-commit = "2ed34215ec3dd5ebd0a0780f7b7903f0b3492a78"
+label = "hayate-openapi 0.8.2 main CI and TypeScript interoperability"
+url = "https://github.com/hayatepy/hayate-openapi/actions/runs/30506643960"
+commit = "1247f16e13faf1cd8b9f507c4715e44bb1ec03be"
 
 [sources.openapi_release]
-label = "hayate-openapi 0.8.1 release provenance"
-url = "https://github.com/hayatepy/hayate-openapi/actions/runs/30487193584"
-commit = "2ed34215ec3dd5ebd0a0780f7b7903f0b3492a78"
+label = "hayate-openapi 0.8.2 release provenance"
+url = "https://github.com/hayatepy/hayate-openapi/actions/runs/30506784156"
+commit = "1247f16e13faf1cd8b9f507c4715e44bb1ec03be"
+
+[sources.sql_ci]
+label = "hayate-sql 0.1.2 main CI"
+url = "https://github.com/hayatepy/hayate-sql/actions/runs/30506643955"
+commit = "4e84db1ab3a7683239f288fb1bae64afa3007303"
+
+[sources.sql_release]
+label = "hayate-sql 0.1.2 release provenance"
+url = "https://github.com/hayatepy/hayate-sql/actions/runs/30506782424"
+commit = "4e84db1ab3a7683239f288fb1bae64afa3007303"
 
 [sources.foliomcp_ci]
 label = "FolioMCP production Workerd CI (private downstream evidence)"
@@ -58,24 +78,24 @@ commit = "a4d110efc223b5774278b21512e176f64f93d525"
 visibility = "private"
 
 [sources.ecosystem_full]
-label = "Hayate 0.15.2 downstream full compatibility CI"
+label = "Hayate 0.15.2 downstream full compatibility CI (runtime-equivalent to metadata-only 0.15.3)"
 url = "https://github.com/hayatepy/hayate/actions/runs/30501023744"
 commit = "64dfb96f2397685c9fe017382855749f445d3697"
 
 [sources.core_ci]
-label = "Hayate 0.15.2 main CI"
-url = "https://github.com/hayatepy/hayate/actions/runs/30501131371"
-commit = "8cb27385cbc2655e531c37bdcdb45b1309c3a392"
+label = "Hayate 0.15.3 main CI"
+url = "https://github.com/hayatepy/hayate/actions/runs/30506644119"
+commit = "a1821a27a83a2406c491338a397b489856db15de"
 
 [sources.core_release]
-label = "Hayate 0.15.2 release provenance"
-url = "https://github.com/hayatepy/hayate/actions/runs/30501262533"
-commit = "8cb27385cbc2655e531c37bdcdb45b1309c3a392"
+label = "Hayate 0.15.3 release provenance"
+url = "https://github.com/hayatepy/hayate/actions/runs/30506830778"
+commit = "a1821a27a83a2406c491338a397b489856db15de"
 
 [sources.scaffold_ci]
 label = "create-hayate 0.13.2 main CI and feature matrix"
-url = "https://github.com/hayatepy/create-hayate/actions/runs/30502494267"
-commit = "8bcca24bbd43854c05a6467d26b675c20a89b63e"
+url = "https://github.com/hayatepy/create-hayate/actions/runs/30506646209"
+commit = "884b2b82dd9c64026d00deecd6afac3200a9baa5"
 
 [sources.scaffold_matrix]
 label = "create-hayate 0.13.2 frontend smoke matrix (10/10)"
@@ -90,24 +110,24 @@ commit = "8bcca24bbd43854c05a6467d26b675c20a89b63e"
 
 [[packages]]
 name = "hayate"
-version = "0.15.2"
+version = "0.15.3"
 role = "Core framework and native ASGI, Workers, and Lambda adapters"
 golden = true
 evidence = ["golden_app", "ecosystem_full", "core_ci", "core_release"]
 
 [[packages]]
 name = "hayate-auth"
-version = "0.10.4"
+version = "0.10.5"
 role = "Sessions, API keys, OAuth clients, and authorization server"
 golden = false
 evidence = ["auth_ci", "auth_security", "auth_release"]
 
 [[packages]]
 name = "hayate-fetch"
-version = "0.1.3"
+version = "0.1.4"
 role = "Portable WHATWG-style outbound fetch"
 golden = false
-evidence = ["ecosystem_full"]
+evidence = ["fetch_ci", "fetch_release", "ecosystem_full"]
 
 [[packages]]
 name = "hayate-mcp"
@@ -118,17 +138,17 @@ evidence = ["golden_app", "mcp_ci", "mcp_release", "foliomcp_ci"]
 
 [[packages]]
 name = "hayate-openapi"
-version = "0.8.1"
+version = "0.8.2"
 role = "OpenAPI 3.1, Scalar, and generated zero-runtime TypeScript clients"
 golden = true
 evidence = ["golden_app", "openapi_ci", "openapi_release", "foliomcp_ci"]
 
 [[packages]]
 name = "hayate-sql"
-version = "0.1.1"
+version = "0.1.2"
 role = "Migration-checked SQL contracts and typed query facades"
 golden = true
-evidence = ["golden_app", "foliomcp_ci"]
+evidence = ["golden_app", "sql_ci", "sql_release", "foliomcp_ci"]
 
 [[packages]]
 name = "create-hayate"
