@@ -10,7 +10,7 @@ Rendered guide: <https://hayatepy.dev/get-started/first-app/>
 Install [uv](https://docs.astral.sh/uv/), then run:
 
 ```sh
-uvx --refresh --from create-hayate==0.13.2 create-hayate my-app --template workers --preset production
+uvx --refresh --from create-hayate==0.14.0 create-hayate my-app --template workers --preset production
 cd my-app
 uv sync
 test -f uv.lock
@@ -32,6 +32,9 @@ local-only, ignored development identity configuration.
   storage.
 - Cloudflare workerd supplies the Workers adapter and a D1 binding. ASGI is not
   required on Cloudflare.
+- Generated Workers expose bounded `X-App-Version` and platform-issued
+  `X-Worker-Version` response headers so rollouts and incidents can be tied to
+  an exact semantic application release and Worker deployment.
 - HTTP and MCP receive the same request identity and call the same checked
   storage layer.
 - The default Workers export is the feature-complete `WorkerEntrypoint` class,

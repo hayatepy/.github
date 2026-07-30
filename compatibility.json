@@ -110,8 +110,8 @@
       ],
       "golden": true,
       "name": "create-hayate",
-      "role": "Composable applications with drift-checked first-party TypeScript clients",
-      "version": "0.13.2"
+      "role": "Composable applications with deployment-identifiable Workers and drift-checked first-party TypeScript clients",
+      "version": "0.14.0"
     }
   ],
   "protocols": {
@@ -210,9 +210,9 @@
       "visibility": "private"
     },
     "golden_app": {
-      "commit": "381c071f108e29b16eae6b19b7f870a4fc3f18a9",
-      "label": "golden-app release lock main CI",
-      "url": "https://github.com/hayatepy/golden-app/actions/runs/30507749113"
+      "commit": "f0e334554f4b98e4be941dcb84feaaf6b47a9c89",
+      "label": "golden-app create-hayate 0.14.0 deployment metadata main CI",
+      "url": "https://github.com/hayatepy/golden-app/actions/runs/30511141307"
     },
     "mcp_ci": {
       "commit": "249b2df4bc41a0603e168b22c53815e31d2d5711",
@@ -235,20 +235,20 @@
       "url": "https://github.com/hayatepy/hayate-openapi/actions/runs/30506784156"
     },
     "scaffold_ci": {
-      "commit": "884b2b82dd9c64026d00deecd6afac3200a9baa5",
-      "label": "create-hayate 0.13.2 main CI and feature matrix",
-      "url": "https://github.com/hayatepy/create-hayate/actions/runs/30506646209"
+      "commit": "261af98f18b1f97cbb94f7bf19a99ab34e92be4f",
+      "label": "create-hayate 0.14.0 main CI and feature matrix",
+      "url": "https://github.com/hayatepy/create-hayate/actions/runs/30510345493"
     },
     "scaffold_matrix": {
-      "artifact_sha256": "f207dcd979c695508c4bf672432848e5469ebf4ab1b58b0f2c4fecb8e004af05",
-      "commit": "2e3d091b903d7a649ab5f03f4fbf058f4e27d0fa",
-      "label": "create-hayate 0.13.2 frontend smoke matrix (10/10)",
-      "url": "https://github.com/hayatepy/create-hayate/actions/runs/30502309672"
+      "artifact_sha256": "d980477da29e494182080adcd79b864ab533a1dcfbc8035b401f75f7dfa97e43",
+      "commit": "261af98f18b1f97cbb94f7bf19a99ab34e92be4f",
+      "label": "create-hayate 0.14.0 full frontend matrix (112/112)",
+      "url": "https://github.com/hayatepy/create-hayate/actions/runs/30511183502"
     },
     "scaffold_release": {
-      "commit": "8bcca24bbd43854c05a6467d26b675c20a89b63e",
-      "label": "create-hayate 0.13.2 release provenance",
-      "url": "https://github.com/hayatepy/create-hayate/actions/runs/30502570222"
+      "commit": "261af98f18b1f97cbb94f7bf19a99ab34e92be4f",
+      "label": "create-hayate 0.14.0 release provenance",
+      "url": "https://github.com/hayatepy/create-hayate/actions/runs/30510444651"
     },
     "sql_ci": {
       "commit": "4e84db1ab3a7683239f288fb1bae64afa3007303",

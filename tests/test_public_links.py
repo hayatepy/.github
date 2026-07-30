@@ -33,8 +33,8 @@ class PublicLinksTest(unittest.TestCase):
     def test_start_uses_the_current_scaffold_release(self) -> None:
         text = (ROOT / "docs" / "START.md").read_text(encoding="utf-8")
 
-        self.assertIn("create-hayate==0.13.2", text)
-        self.assertNotIn("create-hayate==0.13.1", text)
+        self.assertIn("create-hayate==0.14.0", text)
+        self.assertNotIn("create-hayate==0.13.2", text)
 
     def test_design_partner_form_uses_the_public_program_page(self) -> None:
         text = (
